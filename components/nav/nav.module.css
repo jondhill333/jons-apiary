@@ -1,0 +1,7 @@
+.navContainer {
+    width: 90%;
+    height: 30px;
+    border: solid red 1px;
+    display: flex;
+    flex-direction: row;
+  }
