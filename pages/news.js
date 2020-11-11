@@ -1,14 +1,31 @@
-import Link from 'next/link'
-import Layout from '../components/layout/layout'
+import Layout from "../components/layout/layout";
+import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
-export default function newsPage() {
-    return (
-      <>
-      <Layout>
-          <h1>This is where the news Page will go</h1>
-          <h2>Go back to the <Link href="/"><a>home page</a></Link></h2>
-      </Layout>
-      </>
+newsPage.getInitialProps = async function (context) {
+  let queryString = "covid";
+  const apiKey = process.env.NEWS_API_KEY;
+  const GApiKey = process.env.GUARDIAN_NEWS_API_KEY;
 
+  const [newsNews, guardianNews] = await Promise.all([
+    fetch(`https://newsapi.org/v2/everything?q=${queryString}&apiKey=${apiKey}`)
+      .then((r) => r.json())
+      .then((res) => res.articles),
+    fetch(
+      `https://content.guardianapis.com/search?q=${queryString}&api-key=${GApiKey}`
     )
-  }
+      .then((r) => r.json())
+      .then((res) => res.response.results),
+  ]);
+
+  return { newsNews, guardianNews };
+};
+
+export default function newsPage({ newsNews, guardianNews }) {
+  return (
+    <>
+      <Layout>
+        <NewsDisplay newsNews={newsNews} guardianNews={guardianNews} />
+      </Layout>
+    </>
+  );
+}
