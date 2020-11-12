@@ -1,22 +1,35 @@
 import styles from "./newsDisplay.module.css";
+import { v4 as uuidv4 } from "uuid";
 
-function SingleArticle({ newsNews, guardianNews, nytNews }) {
+function SingleArticle({
+  newsNews,
+  guardianNews,
+  nytNews,
+  newsNewsHeadlines,
+  guardianSections,
+  nytNewsDesks,
+}) {
   const { container } = styles;
-  let sortedNews = [...newsNews, ...guardianNews, ...nytNews].sort(function () {
-    return 0.5 - Math.random();
-  });
+  let sortedNews = [];
+  let test = 1;
+  if (test === 1) {
+    sortedNews = [...newsNews, ...guardianNews, ...nytNews].sort(function () {
+      return 0.5 - Math.random();
+    });
+  } else {
+    sortedNews = [
+      ...newsNewsHeadlines,
+      ...guardianSections,
+      ...nytNewsDesks,
+    ].sort(function () {
+      return 0.5 - Math.random();
+    });
+  }
+
   return (
     <>
       {sortedNews.map((article) => (
-        <div
-          key={
-            article.publishedAt
-              ? article.publishedAt
-              : article.webPublicationDate
-              ? article.webPublicationDate
-              : article.pub_date
-          }
-        >
+        <div key={uuidv4()}>
           <div>
             {article.title
               ? article.title
@@ -49,8 +62,14 @@ function SingleArticle({ newsNews, guardianNews, nytNews }) {
   );
 }
 
-export default function NewsDisplay({ newsNews, guardianNews, nytNews }) {
-  console.log(nytNews);
+export default function NewsDisplay({
+  newsNews,
+  guardianNews,
+  nytNews,
+  newsNewsHeadlines,
+  guardianSections,
+  nytNewsDesks,
+}) {
   const { container } = styles;
   return (
     <>
@@ -59,6 +78,9 @@ export default function NewsDisplay({ newsNews, guardianNews, nytNews }) {
           newsNews={newsNews}
           guardianNews={guardianNews}
           nytNews={nytNews}
+          newsNewsHeadlines={newsNewsHeadlines}
+          guardianSections={guardianSections}
+          nytNewsDesks={nytNewsDesks}
         />
       </div>
     </>
