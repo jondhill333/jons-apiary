@@ -4,9 +4,27 @@
   width: 100%;
   margin-bottom: 30px;
 }
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.radioButtonContainer {
+  width: 50%;
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+}
 
 .label {
   margin-right: 10px;
+}
+
+.radioButton {
+}
+
+.searchBarContainer {
+  width: 50%;
 }
 
 .searchbar {
