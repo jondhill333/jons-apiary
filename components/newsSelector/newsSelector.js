@@ -11,6 +11,7 @@ export default function NewsSelector() {
   const {
     newsSelectorContainer,
     label,
+    radioButtonTitle,
     radioButtonContainer,
     radioButton,
     searchBarContainer,
@@ -37,6 +38,8 @@ export default function NewsSelector() {
     const GApiKey = process.env.GUARDIAN_NEWS_API_KEY;
     const NytApiKey = process.env.NYT_NEWS_API_KEY;
 
+    // if category title === entertainment then Gcategory title
+
     e.preventDefault();
 
     if (option === 1) {
@@ -45,7 +48,13 @@ export default function NewsSelector() {
           `https://newsapi.org/v2/top-headlines?country=us&category=${categoryTitle}&apiKey=${apiKey}`
         ),
         fetch(
-          `http://content.guardianapis.com/${categoryTitle}?api-key=${GApiKey}`
+          `http://content.guardianapis.com/${
+            categoryTitle === "entertainment"
+              ? "culture"
+              : categoryTitle === "health"
+              ? "lifeandstyle/health-and-wellbeing"
+              : categoryTitle
+          }?api-key=${GApiKey}`
         ),
         fetch(
           `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22${categoryTitle}%22)&api-key=${NytApiKey}`
@@ -77,7 +86,7 @@ export default function NewsSelector() {
     } else {
       await Promise.all([
         fetch(
-          `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${apiKey}`
+          `https://newsapi.org/v2/everything?q=${searchTerm}&language=en&apiKey=${apiKey}`
         ),
         fetch(
           `https://content.guardianapis.com/search?q=${searchTerm}&api-key=${GApiKey}`
@@ -117,11 +126,14 @@ export default function NewsSelector() {
       <form className={form} onSubmit={handleSubmit}>
         <div className={newsSelectorContainer}>
           <div
-            className={`radioButtonContainer ${
+            className={`${radioButtonContainer} ${
               option === 1 || !option ? "" : unselected
             }`}
             onChange={handleCategoryTitleChange}
           >
+            <div className={radioButtonTitle}>
+              Select a category for the headlines
+            </div>
             <div className={radioButton}>
               <input
                 type="radio"
@@ -159,10 +171,10 @@ export default function NewsSelector() {
               </label>
             </div>
             <div className={radioButton}>
-              <input type="radio" id="sports" name="category" value="sports" />
-              <label className={label} htmlFor="sports">
+              <input type="radio" id="sport" name="category" value="sport" />
+              <label className={label} htmlFor="sport">
                 {" "}
-                Sports
+                Sport
               </label>
             </div>
             <div className={radioButton}>
@@ -187,7 +199,7 @@ export default function NewsSelector() {
           </div>
 
           <div
-            className={`searchBarContainer ${
+            className={`${searchBarContainer} ${
               option === 2 || !option ? "" : unselected
             }`}
           >
