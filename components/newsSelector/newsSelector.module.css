@@ -1,8 +1,10 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  width: 70%;
   margin-bottom: 30px;
+  margin: 0 auto;
 }
 .form {
   display: flex;
@@ -11,10 +13,20 @@
 }
 
 .radioButtonContainer {
-  width: 50%;
+  width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 300px);
+  grid-template-columns: repeat(2, 150px);
+  border: solid red 1px;
 }
+
+/* .inputsContainer {
+  display: flex;
+  flex-direction: row;
+} */
+
+/* .radioButtonContainerDisabled {
+  border: solid red 1px;
+} */
 
 .label {
   margin-right: 10px;
@@ -24,10 +36,17 @@
 }
 
 .searchBarContainer {
-  width: 50%;
+  width: 100%;
+  border: solid red 1px;
 }
 
 .searchbar {
-  margin-left: 30px;
-  margin-right: 10px;
+  /* margin-left: 30px;
+  margin-right: 10px; */
+}
+.submitButtonContainer {
+  text-align: center;
+  grid-row: 2;
+  grid-column: 1 / -1;
+  border: solid red 1px;
 }

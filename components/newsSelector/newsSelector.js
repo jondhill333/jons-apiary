@@ -16,17 +16,19 @@ export default function NewsSelector() {
     radioButton,
     searchBarContainer,
     form,
+    // inputsContainer,
+    submitButtonContainer,
   } = styles;
-
-  function handleSearchTermChange(e) {
-    let searchValueHolder = e.target.value;
-    setSearchTerm(searchValueHolder);
-    setOption(1);
-  }
 
   function handleCategoryTitleChange(e) {
     let categoryHolder = e.target.value;
     setCategoryTitle(categoryHolder);
+    setOption(1);
+  }
+
+  function handleSearchTermChange(e) {
+    let searchValueHolder = e.target.value;
+    setSearchTerm(searchValueHolder);
     setOption(2);
   }
 
@@ -38,41 +40,6 @@ export default function NewsSelector() {
     e.preventDefault();
 
     if (option === 1) {
-      await Promise.all([
-        fetch(
-          `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${apiKey}`
-        ),
-        fetch(
-          `https://content.guardianapis.com/search?q=${searchTerm}&api-key=${GApiKey}`
-        ),
-        fetch(
-          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=${NytApiKey}`
-        ),
-      ])
-        .then((responses) => {
-          return Promise.all(
-            responses.map((response) => {
-              return response.json();
-            })
-          );
-        })
-        .then((data) => {
-          const store = [];
-          data.map((newsArticle) => {
-            if (newsArticle.articles) {
-              store.push(newsArticle.articles);
-            } else if (newsArticle.response.results) {
-              store.push(newsArticle.response.results);
-            } else if (newsArticle.response.docs) {
-              store.push(newsArticle.response.docs);
-            }
-          });
-          const finalArray = store.flat().sort(() => {
-            return 0.5 - Math.random();
-          });
-          setData(finalArray);
-        });
-    } else {
       await Promise.all([
         fetch(
           `https://newsapi.org/v2/top-headlines?country=us&category=${categoryTitle}&apiKey=${apiKey}`
@@ -107,13 +74,48 @@ export default function NewsSelector() {
           });
           setData(finalArray);
         });
+    } else {
+      await Promise.all([
+        fetch(
+          `https://newsapi.org/v2/everything?q=${searchTerm}&apiKey=${apiKey}`
+        ),
+        fetch(
+          `https://content.guardianapis.com/search?q=${searchTerm}&api-key=${GApiKey}`
+        ),
+        fetch(
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=${NytApiKey}`
+        ),
+      ])
+        .then((responses) => {
+          return Promise.all(
+            responses.map((response) => {
+              return response.json();
+            })
+          );
+        })
+        .then((data) => {
+          const store = [];
+          data.map((newsArticle) => {
+            if (newsArticle.articles) {
+              store.push(newsArticle.articles);
+            } else if (newsArticle.response.results) {
+              store.push(newsArticle.response.results);
+            } else if (newsArticle.response.docs) {
+              store.push(newsArticle.response.docs);
+            }
+          });
+          const finalArray = store.flat().sort(() => {
+            return 0.5 - Math.random();
+          });
+          setData(finalArray);
+        });
     }
   }
 
   return (
     <>
-      <div className={container}>
-        <form className={form} onSubmit={handleSubmit}>
+      <form className={form} onSubmit={handleSubmit}>
+        <div className={container}>
           <div
             className={radioButtonContainer}
             onChange={handleCategoryTitleChange}
@@ -181,10 +183,12 @@ export default function NewsSelector() {
               </label>
             </div>
           </div>
+
           <div className={searchBarContainer}>
             <label className={searchbar} htmlFor="searchTerm">
               Or type something to look up
             </label>
+            <br />
             <input
               placeholder="type a word"
               type="text"
@@ -192,10 +196,14 @@ export default function NewsSelector() {
               name="fnasearchTermme"
               onChange={handleSearchTermChange}
             />
+          </div>
+
+          <div className={submitButtonContainer}>
             <input type="submit" value="Submit" />
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
+
       <NewsDisplay data={data} />
     </>
   );
