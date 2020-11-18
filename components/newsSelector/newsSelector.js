@@ -38,8 +38,6 @@ export default function NewsSelector() {
     const GApiKey = process.env.GUARDIAN_NEWS_API_KEY;
     const NytApiKey = process.env.NYT_NEWS_API_KEY;
 
-    // if category title === entertainment then Gcategory title
-
     e.preventDefault();
 
     if (option === 1) {
@@ -120,6 +118,8 @@ export default function NewsSelector() {
         });
     }
   }
+
+  console.log(data);
 
   return (
     <>

@@ -1,16 +1,22 @@
 html,
-
 :root {
-  --blue:#0070f3;
+  --blue: #0070f3;
+  --floralWhite: #f9f7f1;
+  --seaGreen: #388659;
+  --black: #000000;
+  --oxfordBlue: #14213d;
+  --orangeWeb: #fca311;
+  --offGrey: #f6f6f6;
 }
 
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  /* background: var(--seaGreen); */
 }
 
 * {
@@ -18,7 +24,7 @@ body {
 }
 
 a {
-  color: var(--blue);
+  color: var(--oxfordBlue);
   text-decoration: none;
 }
 

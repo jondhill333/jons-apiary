@@ -1,0 +1,31 @@
+.articleContainer {
+  border: solid black 2px;
+  border-radius: 6px;
+  box-shadow: -2px 2px black;
+  width: 100%;
+  height: auto;
+  padding: 4% 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--offGrey);
+
+  /* justify-content: space-between; */
+}
+
+.articleTitle {
+  height: 60%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.articleItem {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.source {
+}
+
+.link {
+}
