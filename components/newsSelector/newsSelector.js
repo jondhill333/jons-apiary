@@ -9,15 +9,15 @@ export default function NewsSelector() {
   const [data, setData] = useState([]);
 
   const {
-    container,
+    newsSelectorContainer,
     label,
-    searchbar,
     radioButtonContainer,
     radioButton,
     searchBarContainer,
+    searchbar,
     form,
-    // inputsContainer,
     submitButtonContainer,
+    unselected,
   } = styles;
 
   function handleCategoryTitleChange(e) {
@@ -115,9 +115,11 @@ export default function NewsSelector() {
   return (
     <>
       <form className={form} onSubmit={handleSubmit}>
-        <div className={container}>
+        <div className={newsSelectorContainer}>
           <div
-            className={radioButtonContainer}
+            className={`radioButtonContainer ${
+              option === 1 || !option ? "" : unselected
+            }`}
             onChange={handleCategoryTitleChange}
           >
             <div className={radioButton}>
@@ -184,7 +186,11 @@ export default function NewsSelector() {
             </div>
           </div>
 
-          <div className={searchBarContainer}>
+          <div
+            className={`searchBarContainer ${
+              option === 2 || !option ? "" : unselected
+            }`}
+          >
             <label className={searchbar} htmlFor="searchTerm">
               Or type something to look up
             </label>
@@ -194,6 +200,7 @@ export default function NewsSelector() {
               type="text"
               id="searchTerm"
               name="fnasearchTermme"
+              onClick={handleSearchTermChange}
               onChange={handleSearchTermChange}
             />
           </div>

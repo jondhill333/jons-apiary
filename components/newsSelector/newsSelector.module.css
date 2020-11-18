@@ -1,4 +1,4 @@
-.container {
+.newsSelectorContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
@@ -17,16 +17,13 @@
   display: grid;
   grid-template-columns: repeat(2, 150px);
   border: solid red 1px;
+  justify-content: center;
+  /* filter: blur(2px); */
 }
 
-/* .inputsContainer {
-  display: flex;
-  flex-direction: row;
-} */
-
-/* .radioButtonContainerDisabled {
-  border: solid red 1px;
-} */
+.unselected {
+  opacity: 0.4;
+}
 
 .label {
   margin-right: 10px;
@@ -41,8 +38,6 @@
 }
 
 .searchbar {
-  /* margin-left: 30px;
-  margin-right: 10px; */
 }
 .submitButtonContainer {
   text-align: center;
