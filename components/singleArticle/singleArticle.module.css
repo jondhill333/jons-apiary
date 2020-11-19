@@ -1,33 +1,81 @@
-.container {
+.containerTypeOne {
   width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(24, 80px);
+  grid-template-rows: repeat(7, 80px);
   grid-template-areas:
-    "one one one two"
-    "one one one two"
-    "one one one two"
-    "one one one two"
-    "three four five six"
-    "three seven seven eight"
-    "three seven seven eight"
-    "nine ten eleven eight"
-    "twelve twelve twelve thirteen"
-    "twelve twelve twelve thirteen"
-    "twelve twelve twelve thirteen"
-    "twelve twelve twelve thirteen"
-    "fourteen fifteen sixteen seventeen"
-    "fourteen eighteen eighteen nineteen"
-    "fourteen eighteen eighteen nineteen"
-    "twenty twentyOne twentyTwo nineteen";
-
+    "one   two  two   two"
+    "one   two  two   two"
+    "one   two  two   two"
+    "three two  two   two"
+    "three four four five"
+    "three four four five"
+    "three four four five";
   gap: 10px;
   margin-top: 20px;
 }
 
+.articleContainer {
+  width: 100%;
+  height: 100%;
+  padding: 4% 5px;
+}
+
+.containerTypeOne div:nth-child(1) {
+  grid-area: one;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 5px;
+}
+.containerTypeOne div:nth-child(2) {
+  grid-area: two;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.containerTypeOne div:nth-child(2) .articleImage {
+  order: 1;
+}
+
+.containerTypeOne div:nth-child(3) {
+  grid-area: three;
+}
+.containerTypeOne div:nth-child(4) {
+  grid-area: four;
+}
+.containerTypeOne div:nth-child(5) {
+  grid-area: five;
+}
+
+.articleImage {
+}
+
+.articleTitle {
+  height: 60%;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.articleItem {
+  height: 20%;
+  display: flex;
+  align-items: center;
+}
+
+.containerTypeTwo {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px;
+  gap: 10px;
+}
+
 .container div:nth-child(1) {
   grid-area: one;
+  display: flex;
+  flex-direction: column;
+  padding: 4% 5px;
 }
 .container div:nth-child(2) {
   grid-area: two;
@@ -91,33 +139,6 @@
 }
 .container div:nth-child(22) {
   grid-area: twentyTwo;
-}
-
-.articleContainer {
-  border: solid black 2px;
-  border-radius: 6px;
-  box-shadow: -2px 2px black;
-  width: 100%;
-  height: 100%;
-  /* height: auto; */
-  padding: 4% 5px;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--offGrey);
-
-  /* justify-content: space-between; */
-}
-
-.articleTitle {
-  height: 60%;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.articleItem {
-  height: 20%;
-  display: flex;
-  align-items: center;
 }
 
 .source {

@@ -4,20 +4,14 @@ import { v4 as uuidv4 } from "uuid";
 export default function SingleArticle({ data }) {
   const {
     containerTypeOne,
-    article,
-    articleImage,
+    containerTypeTwo,
     articleContainer,
+    articleImage,
     articleTitle,
     articleItem,
     source,
     link,
   } = styles;
-
-  // if the data contains an identifier to be a specific source
-  // render a specifc type of div
-  // news API STORIES CAN be of type one, two, 3 and four
-  // guardian and NTY can only be type 5
-  // the order is one, two , three, 5, 5, three, 4, 5, 5, 5,
 
   let newsStoreOne = data.slice(0, 4);
   let newsStoreTwo = data.slice(5, 9);
@@ -37,7 +31,7 @@ export default function SingleArticle({ data }) {
       <div className={containerTypeOne}>
         {newsStoreOne &&
           newsStoreOne.map((article) => (
-            <div key={uuidv4()} className={article}>
+            <div key={uuidv4()} className={articleContainer}>
               <div className={articleImage}>
                 <img src={article.urlToImage}></img>
               </div>
@@ -48,6 +42,31 @@ export default function SingleArticle({ data }) {
               <div className={`${articleItem} ${source}`}>{article.source}</div>
               <div className={`${articleItem} ${link}`}>
                 <a target="_blank" href={article.url}>
+                  Read full story here
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={containerTypeTwo}>
+        {gAndNytStoreOne &&
+          gAndNytStoreOne.map((article) => (
+            <div key={uuidv4()} className={articleContainer}>
+              <div className={articleTitle}>
+                {article.webTitle
+                  ? article.webTitle.split(" - ")[0].substr(0, 100)
+                  : article.headline.main.split(" - ")[0].substr(0, 100)}
+              </div>
+              <div className={`${articleItem} ${source}`}>
+                {article.source === "The New York Times"
+                  ? "The New York Times"
+                  : "The Guardian"}
+              </div>
+              <div className={`${articleItem} ${link}`}>
+                <a
+                  target="_blank"
+                  href={article.url ? article.url : article.web_url}
+                >
                   Read full story here
                 </a>
               </div>
