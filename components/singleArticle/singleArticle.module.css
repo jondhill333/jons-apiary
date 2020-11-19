@@ -1,9 +1,105 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(24, 80px);
+  grid-template-areas:
+    "one one one two"
+    "one one one two"
+    "one one one two"
+    "one one one two"
+    "three four five six"
+    "three seven seven eight"
+    "three seven seven eight"
+    "nine ten eleven eight"
+    "twelve twelve twelve thirteen"
+    "twelve twelve twelve thirteen"
+    "twelve twelve twelve thirteen"
+    "twelve twelve twelve thirteen"
+    "fourteen fifteen sixteen seventeen"
+    "fourteen eighteen eighteen nineteen"
+    "fourteen eighteen eighteen nineteen"
+    "twenty twentyOne twentyTwo nineteen";
+
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.container div:nth-child(1) {
+  grid-area: one;
+}
+.container div:nth-child(2) {
+  grid-area: two;
+}
+.container div:nth-child(3) {
+  grid-area: three;
+}
+.container div:nth-child(4) {
+  grid-area: four;
+}
+.container div:nth-child(5) {
+  grid-area: five;
+}
+.container div:nth-child(6) {
+  grid-area: six;
+}
+.container div:nth-child(7) {
+  grid-area: seven;
+}
+.container div:nth-child(8) {
+  grid-area: eight;
+}
+.container div:nth-child(9) {
+  grid-area: nine;
+}
+.container div:nth-child(10) {
+  grid-area: ten;
+}
+.container div:nth-child(11) {
+  grid-area: eleven;
+}
+.container div:nth-child(12) {
+  grid-area: twelve;
+}
+.container div:nth-child(13) {
+  grid-area: thirteen;
+}
+.container div:nth-child(14) {
+  grid-area: fourteen;
+}
+.container div:nth-child(15) {
+  grid-area: fifteen;
+}
+.container div:nth-child(16) {
+  grid-area: sixteen;
+}
+.container div:nth-child(17) {
+  grid-area: seventeen;
+}
+.container div:nth-child(18) {
+  grid-area: eighteen;
+}
+.container div:nth-child(19) {
+  grid-area: nineteen;
+}
+.container div:nth-child(20) {
+  grid-area: twenty;
+}
+.container div:nth-child(21) {
+  grid-area: twentyOne;
+}
+.container div:nth-child(22) {
+  grid-area: twentyTwo;
+}
+
 .articleContainer {
   border: solid black 2px;
   border-radius: 6px;
   box-shadow: -2px 2px black;
   width: 100%;
-  height: auto;
+  height: 100%;
+  /* height: auto; */
   padding: 4% 5px;
   display: flex;
   flex-direction: column;

@@ -80,6 +80,7 @@ export default function NewsSelector() {
             return 0.5 - Math.random();
           });
           setData(finalArray);
+          setData(store.flat());
         });
     } else {
       await Promise.all([
@@ -111,10 +112,10 @@ export default function NewsSelector() {
               store.push(newsArticle.response.docs);
             }
           });
-          const finalArray = store.flat().sort(() => {
-            return 0.5 - Math.random();
-          });
-          setData(finalArray);
+          // const finalArray = store.flat().sort(() => {
+          //   return 0.5 - Math.random();
+          // });
+          setData(store.flat());
         });
     }
   }
