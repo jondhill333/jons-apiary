@@ -14,6 +14,7 @@
     "three four four five";
   gap: 5px;
   margin-top: 20px;
+  background: var(--offGrey);
 }
 
 .articleContainer {
@@ -195,4 +196,19 @@
   width: 100%;
   font-size: 1rem;
   border: solid red 1px;
+}
+
+.containerTypeTwo {
+  width: 90%;
+  margin: 5px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  font-size: 1rem;
+  background: var(--offGrey);
+}
+
+.containerTypeTwo .articleTitle {
+  font-size: 1rem;
+  font-weight: 700;
 }

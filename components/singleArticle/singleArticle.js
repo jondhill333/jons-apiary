@@ -25,15 +25,15 @@ export default function SingleArticle({ data }) {
     newsStoreTwo = data.slice(5, 10);
     newsStoreThree = data.slice(10, 15);
 
-    gAndNytStoreMain = data.slice(15).sort(() => {
+    gAndNytStoreMain = data.slice(20).sort(() => {
       return 0.5 - Math.random();
     });
 
-    gAndNytStoreOne = gAndNytStoreMain.slice(0, 3);
-    gAndNytStoreTwo = gAndNytStoreMain.slice(4, 7);
-    gAndNytStorethree = gAndNytStoreMain.slice(8, 11);
+    gAndNytStoreOne = gAndNytStoreMain.slice(0, 4);
+    gAndNytStoreTwo = gAndNytStoreMain.slice(4, 8);
+    gAndNytStorethree = gAndNytStoreMain.slice(8);
   }
-  console.log(newsStoreOne);
+  console.log(data);
 
   return (
     <>
@@ -57,7 +57,7 @@ export default function SingleArticle({ data }) {
             </div>
           ))}
       </div>
-      {/* <div className={containerTypeTwo}>
+      <div className={containerTypeTwo}>
         {gAndNytStoreOne &&
           gAndNytStoreOne.map((article) => (
             <div key={uuidv4()} className={articleContainer}>
@@ -68,12 +68,12 @@ export default function SingleArticle({ data }) {
                   ? article.headline.main.split(" - ")[0].substr(0, 100)
                   : ""}
               </div>
-              <div className={`${articleItem} ${source}`}>
+              <div className={source}>
                 {article.source === "The New York Times"
                   ? "The New York Times"
                   : "The Guardian"}
               </div>
-              <div className={`${articleItem} ${link}`}>
+              <div className={link}>
                 <a
                   target="_blank"
                   href={
@@ -89,7 +89,7 @@ export default function SingleArticle({ data }) {
               </div>
             </div>
           ))}
-      </div> */}
+      </div>
     </>
   );
 }
