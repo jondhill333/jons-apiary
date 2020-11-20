@@ -31,7 +31,7 @@ export default function SingleArticle({ data }) {
 
     gAndNytStoreOne = gAndNytStoreMain.slice(0, 4);
     gAndNytStoreTwo = gAndNytStoreMain.slice(4, 8);
-    gAndNytStorethree = gAndNytStoreMain.slice(8);
+    gAndNytStorethree = gAndNytStoreMain.slice(8, 12);
   }
   console.log(data);
 
@@ -60,6 +60,112 @@ export default function SingleArticle({ data }) {
       <div className={containerTypeTwo}>
         {gAndNytStoreOne &&
           gAndNytStoreOne.map((article) => (
+            <div key={uuidv4()} className={articleContainer}>
+              <div className={articleTitle}>
+                {article.webTitle
+                  ? article.webTitle.split(" - ")[0].substr(0, 100)
+                  : article.headline
+                  ? article.headline.main.split(" - ")[0].substr(0, 100)
+                  : ""}
+              </div>
+              <div className={source}>
+                {article.source === "The New York Times"
+                  ? "The New York Times"
+                  : "The Guardian"}
+              </div>
+              <div className={link}>
+                <a
+                  target="_blank"
+                  href={
+                    article.url
+                      ? article.url
+                      : article.web_url
+                      ? article.web_url
+                      : ""
+                  }
+                >
+                  Read full story here
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={containerTypeOne}>
+        {newsStoreTwo &&
+          newsStoreTwo.map((article) => (
+            <div key={uuidv4()} className={articleContainer}>
+              <div className={articleImage}>
+                <img src={article.urlToImage} />
+              </div>
+
+              <div className={articleTitle}>
+                {article.title.split(" - ")[0].substr(0, 100)}
+              </div>
+              <div className={source}>{article.source.name}</div>
+              <div className={link}>
+                <a target="_blank" href={article.url}>
+                  Read full story here
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={containerTypeTwo}>
+        {gAndNytStoreTwo &&
+          gAndNytStoreTwo.map((article) => (
+            <div key={uuidv4()} className={articleContainer}>
+              <div className={articleTitle}>
+                {article.webTitle
+                  ? article.webTitle.split(" - ")[0].substr(0, 100)
+                  : article.headline
+                  ? article.headline.main.split(" - ")[0].substr(0, 100)
+                  : ""}
+              </div>
+              <div className={source}>
+                {article.source === "The New York Times"
+                  ? "The New York Times"
+                  : "The Guardian"}
+              </div>
+              <div className={link}>
+                <a
+                  target="_blank"
+                  href={
+                    article.url
+                      ? article.url
+                      : article.web_url
+                      ? article.web_url
+                      : ""
+                  }
+                >
+                  Read full story here
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={containerTypeOne}>
+        {newsStoreThree &&
+          newsStoreThree.map((article) => (
+            <div key={uuidv4()} className={articleContainer}>
+              <div className={articleImage}>
+                <img src={article.urlToImage} />
+              </div>
+
+              <div className={articleTitle}>
+                {article.title.split(" - ")[0].substr(0, 100)}
+              </div>
+              <div className={source}>{article.source.name}</div>
+              <div className={link}>
+                <a target="_blank" href={article.url}>
+                  Read full story here
+                </a>
+              </div>
+            </div>
+          ))}
+      </div>
+      <div className={containerTypeTwo}>
+        {gAndNytStorethree &&
+          gAndNytStorethree.map((article) => (
             <div key={uuidv4()} className={articleContainer}>
               <div className={articleTitle}>
                 {article.webTitle

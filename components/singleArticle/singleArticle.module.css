@@ -17,7 +17,7 @@
   background: var(--offGrey);
 }
 
-.articleContainer {
+.containerTypeOne .articleContainer {
   max-height: auto;
   width: 100%;
   padding: 1% 5px;
@@ -203,12 +203,20 @@
   margin: 5px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(auto, 100px);
   gap: 5px;
   font-size: 1rem;
   background: var(--offGrey);
 }
 
+.containerTypeTwo .articleContainer {
+  min-height: auto;
+  width: 100%;
+  padding: 1% 5px;
+  border: solid red 1px;
+  font-size: 0.85rem;
+}
+
 .containerTypeTwo .articleTitle {
-  font-size: 1rem;
   font-weight: 700;
 }
