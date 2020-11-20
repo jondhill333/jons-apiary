@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(7, 80px);
+  grid-template-rows: repeat(7, minmax(70px, auto));
   grid-template-areas:
     "one   two  two   two"
     "one   two  two   two"
@@ -12,137 +12,187 @@
     "three four four five"
     "three four four five"
     "three four four five";
-  gap: 10px;
+  gap: 5px;
   margin-top: 20px;
 }
 
 .articleContainer {
+  max-height: auto;
   width: 100%;
-  height: 100%;
-  padding: 4% 5px;
+  padding: 1% 5px;
+  border: solid red 1px;
 }
 
-.containerTypeOne div:nth-child(1) {
+.containerTypeOne :nth-child(1) {
   grid-area: one;
   display: flex;
   flex-direction: column;
-  padding: 4% 5px;
 }
-.containerTypeOne div:nth-child(2) {
+.containerTypeOne :nth-child(1) .articleImage {
+  height: 70%;
+  width: 100%;
+}
+.containerTypeOne :nth-child(1) .articleTitle {
+  min-height: 30%;
+  max-height: auto;
+  width: 100%;
+  font-size: 0.95rem;
+  margin-top: 5px;
+}
+.containerTypeOne :nth-child(1) .source {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
+}
+
+.containerTypeOne :nth-child(1) .link {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
+}
+
+.containerTypeOne :nth-child(2) {
   grid-area: two;
-  display: grid;
-  grid-template-columns: 40% 60%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
 }
-.containerTypeOne div:nth-child(2) .articleImage {
+
+.containerTypeOne :nth-child(2) .articleTitle {
   order: 1;
+  font-size: 1rem;
+  width: 40%;
+  height: 0%;
+  border: solid red 1px;
 }
-
-.containerTypeOne div:nth-child(3) {
-  grid-area: three;
-}
-.containerTypeOne div:nth-child(4) {
-  grid-area: four;
-}
-.containerTypeOne div:nth-child(5) {
-  grid-area: five;
-}
-
-.articleImage {
-}
-
-.articleTitle {
-  height: 60%;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
-
-.articleItem {
-  height: 20%;
+.containerTypeOne :nth-child(2) .articleImage {
   display: flex;
-  align-items: center;
+  order: 2;
+  height: 80%;
+  width: 60%;
+  border: solid red 1px;
 }
 
-.containerTypeTwo {
-  width: 90%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 80px;
-  gap: 10px;
+.containerTypeOne :nth-child(2) .articleImage > img {
+  height: 100%;
+  width: 100%;
 }
 
-.container div:nth-child(1) {
-  grid-area: one;
+.containerTypeOne :nth-child(2) .source {
+  order: 3;
+  height: 10%;
+  font-size: 1rem;
+  border: solid red 1px;
+  width: 40%;
+}
+
+.containerTypeOne :nth-child(2) .link {
+  order: 4;
+  height: 10%;
+  font-size: 1rem;
+  width: 40%;
+}
+
+.containerTypeOne :nth-child(3) {
+  grid-area: three;
   display: flex;
   flex-direction: column;
-  padding: 4% 5px;
 }
-.container div:nth-child(2) {
-  grid-area: two;
+.containerTypeOne :nth-child(3) .articleImage {
+  height: 70%;
+  width: 100%;
 }
-.container div:nth-child(3) {
-  grid-area: three;
+.containerTypeOne :nth-child(3) .articleTitle {
+  height: 30%;
+  width: 100%;
+  font-size: 0.95rem;
+  margin-top: 5px;
 }
-.container div:nth-child(4) {
+.containerTypeOne :nth-child(3) .source {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
+}
+
+.containerTypeOne :nth-child(3) .link {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
+}
+
+.containerTypeOne :nth-child(4) {
   grid-area: four;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
 }
-.container div:nth-child(5) {
+
+.containerTypeOne :nth-child(4) .articleTitle {
+  order: 1;
+  font-size: 1rem;
+  width: 40%;
+  height: 80%;
+  border: solid red 1px;
+}
+
+.containerTypeOne :nth-child(4) .articleImage {
+  order: 2;
+  width: 60%;
+  height: 80%;
+}
+
+.containerTypeOne :nth-child(4) .articleImage > img {
+  height: 100%;
+  width: 100%;
+}
+
+.containerTypeOne :nth-child(4) .source {
+  order: 3;
+  height: 10%;
+  font-size: 1rem;
+  border: solid red 1px;
+  width: 40%;
+}
+
+.containerTypeOne :nth-child(4) .link {
+  order: 4;
+  height: 10%;
+  font-size: 1rem;
+  width: 40%;
+}
+
+.containerTypeOne :nth-child(5) {
   grid-area: five;
+  display: flex;
+  flex-direction: column;
 }
-.container div:nth-child(6) {
-  grid-area: six;
+.containerTypeOne :nth-child(5) .articleImage {
+  height: 70%;
+  width: 100%;
 }
-.container div:nth-child(7) {
-  grid-area: seven;
+.containerTypeOne :nth-child(5) .articleTitle {
+  min-height: 30%;
+  max-height: auto;
+  width: 100%;
+  font-size: 0.95rem;
+  margin-top: 5px;
 }
-.container div:nth-child(8) {
-  grid-area: eight;
-}
-.container div:nth-child(9) {
-  grid-area: nine;
-}
-.container div:nth-child(10) {
-  grid-area: ten;
-}
-.container div:nth-child(11) {
-  grid-area: eleven;
-}
-.container div:nth-child(12) {
-  grid-area: twelve;
-}
-.container div:nth-child(13) {
-  grid-area: thirteen;
-}
-.container div:nth-child(14) {
-  grid-area: fourteen;
-}
-.container div:nth-child(15) {
-  grid-area: fifteen;
-}
-.container div:nth-child(16) {
-  grid-area: sixteen;
-}
-.container div:nth-child(17) {
-  grid-area: seventeen;
-}
-.container div:nth-child(18) {
-  grid-area: eighteen;
-}
-.container div:nth-child(19) {
-  grid-area: nineteen;
-}
-.container div:nth-child(20) {
-  grid-area: twenty;
-}
-.container div:nth-child(21) {
-  grid-area: twentyOne;
-}
-.container div:nth-child(22) {
-  grid-area: twentyTwo;
+.containerTypeOne :nth-child(5) .source {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
 }
 
-.source {
-}
-
-.link {
+.containerTypeOne :nth-child(5) .link {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  border: solid red 1px;
 }

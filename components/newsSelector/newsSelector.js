@@ -43,7 +43,7 @@ export default function NewsSelector() {
     if (option === 1) {
       await Promise.all([
         fetch(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${categoryTitle}&pageSize=15&apiKey=${apiKey}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=${categoryTitle}&apiKey=${apiKey}`
         ),
         fetch(
           `http://content.guardianapis.com/${
@@ -52,7 +52,7 @@ export default function NewsSelector() {
               : categoryTitle === "health"
               ? "lifeandstyle/health-and-wellbeing"
               : categoryTitle
-          }?&page-size=6&api-key=${GApiKey}`
+          }?&api-key=${GApiKey}`
         ),
         fetch(
           `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22${categoryTitle}%22)&api-key=${NytApiKey}`
@@ -68,32 +68,28 @@ export default function NewsSelector() {
         .then((data) => {
           const store = [];
           data.map((newsArticle) => {
-            // newsArticle.response
-            //   ? console.log(newsArticle.response)
-            //   : console.log("nope");
             if (newsArticle.articles) {
               store.push(newsArticle.articles);
             } else if (newsArticle.response) {
               store.push(newsArticle.response.results);
+              // store.push(newsArticle.response.docs);
+            } else if (newsArticle.response.docs) {
               store.push(newsArticle.response.docs);
             }
-            // else if (newsArticle.response.docs) {
-            //   store.push(newsArticle.response.docs);
-            // }
           });
+          const finalArray = store.flat();
           // const finalArray = store.flat().sort(() => {
           //   return 0.5 - Math.random();
           // });
-          // setData(finalArray);
-          setData(store.flat());
+          setData(finalArray);
         });
     } else {
       await Promise.all([
         fetch(
-          `https://newsapi.org/v2/everything?q=${searchTerm}&language=en&pageSize=15&apiKey=${apiKey}`
+          `https://newsapi.org/v2/everything?q=${searchTerm}&language=en&apiKey=${apiKey}`
         ),
         fetch(
-          `https://content.guardianapis.com/search?q=${searchTerm}&page-size=6&api-key=${GApiKey}`
+          `https://content.guardianapis.com/search?q=${searchTerm}&api-key=${GApiKey}`
         ),
         fetch(
           `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchTerm}&api-key=${NytApiKey}`
@@ -117,15 +113,14 @@ export default function NewsSelector() {
               store.push(newsArticle.response.docs);
             }
           });
+          const finalArray = store.flat();
           // const finalArray = store.flat().sort(() => {
           //   return 0.5 - Math.random();
           // });
-          setData(store.flat());
+          setData(finalArray);
         });
     }
   }
-
-  console.log(data);
 
   return (
     <>
