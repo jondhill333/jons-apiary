@@ -25,7 +25,7 @@ export default function SingleArticle({ data }) {
     newsStoreTwo = data.slice(5, 10);
     newsStoreThree = data.slice(10, 15);
 
-    gAndNytStoreMain = data.slice(20).sort(() => {
+    gAndNytStoreMain = data.slice(20, 40).sort(() => {
       return 0.5 - Math.random();
     });
 
@@ -33,7 +33,6 @@ export default function SingleArticle({ data }) {
     gAndNytStoreTwo = gAndNytStoreMain.slice(4, 8);
     gAndNytStorethree = gAndNytStoreMain.slice(8, 12);
   }
-  console.log(data);
 
   return (
     <>

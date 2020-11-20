@@ -55,7 +55,9 @@ export default function NewsSelector() {
           }?&api-key=${GApiKey}`
         ),
         fetch(
-          `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22${categoryTitle}%22)&api-key=${NytApiKey}`
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(${
+            categoryTitle === "entertainment" ? "culture" : categoryTitle
+          })&api-key=${NytApiKey}`
         ),
       ])
         .then((responses) => {
@@ -70,17 +72,13 @@ export default function NewsSelector() {
           data.map((newsArticle) => {
             if (newsArticle.articles) {
               store.push(newsArticle.articles);
-            } else if (newsArticle.response) {
+            } else if (newsArticle.response.results) {
               store.push(newsArticle.response.results);
-              // store.push(newsArticle.response.docs);
             } else if (newsArticle.response.docs) {
               store.push(newsArticle.response.docs);
             }
           });
           const finalArray = store.flat();
-          // const finalArray = store.flat().sort(() => {
-          //   return 0.5 - Math.random();
-          // });
           setData(finalArray);
         });
     } else {
@@ -114,9 +112,6 @@ export default function NewsSelector() {
             }
           });
           const finalArray = store.flat();
-          // const finalArray = store.flat().sort(() => {
-          //   return 0.5 - Math.random();
-          // });
           setData(finalArray);
         });
     }
