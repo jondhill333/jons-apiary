@@ -20,12 +20,12 @@ export default function Nav() {
             Agregator
           </div>
           <div className={appDescription}>
-            All the best stories from the best news outlets
+            All the top stories from the best news outlets
           </div>
           <div className={categoryPagesContainer}>
             <div>
               <Link href="/">
-                <a>HeadLines</a>
+                <a>Headlines</a>
               </Link>
             </div>
             <div>
@@ -39,8 +39,8 @@ export default function Nav() {
               </Link>
             </div>
             <div>
-              <Link href="/entertainment">
-                <a>Entertainment</a>
+              <Link href="/culture">
+                <a>Culture</a>
               </Link>
             </div>
             <div>

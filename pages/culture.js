@@ -33,7 +33,7 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default function EntertainmentPage({ newsNews, guardianNews, nytNews }) {
+export default function CulturePage({ newsNews, guardianNews, nytNews }) {
   const allNews = [];
   allNews.push(newsNews);
   allNews.push(guardianNews);
@@ -43,7 +43,7 @@ export default function EntertainmentPage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Entertainment News</h1>
+        <h1>CulturePage News</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>
