@@ -24,12 +24,12 @@ body {
 }
 
 a {
-  color: var(--oxfordBlue);
+  color: white;
   text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 img {
