@@ -52,10 +52,12 @@ export default function NewsSelector() {
               : categoryTitle === "health"
               ? "lifeandstyle/health-and-wellbeing"
               : categoryTitle
-          }?api-key=${GApiKey}`
+          }?&api-key=${GApiKey}`
         ),
         fetch(
-          `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(%22${categoryTitle}%22)&api-key=${NytApiKey}`
+          `https://api.nytimes.com/svc/search/v2/articlesearch.json?fq=news_desk:(${
+            categoryTitle === "entertainment" ? "culture" : categoryTitle
+          })&api-key=${NytApiKey}`
         ),
       ])
         .then((responses) => {
@@ -76,11 +78,8 @@ export default function NewsSelector() {
               store.push(newsArticle.response.docs);
             }
           });
-          const finalArray = store.flat().sort(() => {
-            return 0.5 - Math.random();
-          });
+          const finalArray = store.flat();
           setData(finalArray);
-          setData(store.flat());
         });
     } else {
       await Promise.all([
@@ -112,15 +111,11 @@ export default function NewsSelector() {
               store.push(newsArticle.response.docs);
             }
           });
-          // const finalArray = store.flat().sort(() => {
-          //   return 0.5 - Math.random();
-          // });
-          setData(store.flat());
+          const finalArray = store.flat();
+          setData(finalArray);
         });
     }
   }
-
-  console.log(data);
 
   return (
     <>
