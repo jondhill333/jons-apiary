@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout/layout";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
+import NewsSearch from "../components/newsSelector/newsSearch";
 
 export async function getServerSideProps(context) {
   const apiKey = process.env.NEWS_API_KEY;
@@ -66,12 +67,11 @@ export default function HeedlinesPage({
 
   const articles = [...newsApiStore, ...gAndNytStore].flat();
 
-  console.log(articles);
-
   return (
     <>
       <Layout>
         <h1>Headlines</h1>
+        {/* <NewsSearch /> */}
         <NewsDisplay articles={articles} />
       </Layout>
     </>
