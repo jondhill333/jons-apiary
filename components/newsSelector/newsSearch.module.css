@@ -1,0 +1,55 @@
+.newsSelectorContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  width: 70%;
+  margin-bottom: 30px;
+  margin: 0 auto;
+  background: var(--floralWhite);
+  border: var(--orangeWeb) solid 2px;
+  border-radius: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.radioButtonContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  row-gap: 2px;
+  column-gap: 20px;
+  /* grid-template-rows: repeat(3, auto); */
+  justify-content: center;
+  /* filter: blur(2px); */
+}
+
+.radioButtonTitle {
+  grid-column: 1 / -1;
+}
+
+.unselected {
+  opacity: 0.4;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.radioButton {
+}
+
+.searchBarContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.searchbar {
+}
+.submitButtonContainer {
+  text-align: center;
+  grid-row: 2;
+  grid-column: 1 / -1;
+}
