@@ -36,11 +36,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function HealthPage({ newsNews, guardianNews, nytNews }) {
-  const allNews = [];
-  allNews.push(newsNews);
-  allNews.push(guardianNews);
-  allNews.push(nytNews);
-  const articles = allNews.flat();
+  const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
 
   return (
     <>

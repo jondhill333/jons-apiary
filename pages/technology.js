@@ -1,7 +1,4 @@
-import Link from "next/link";
-import { useState } from "react";
 import Layout from "../components/layout/layout";
-import { v4 as uuidv4 } from "uuid";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
 export async function getServerSideProps(context) {
@@ -36,11 +33,7 @@ export async function getServerSideProps(context) {
 }
 
 export default function TechnologyPage({ newsNews, guardianNews, nytNews }) {
-  const allNews = [];
-  allNews.push(newsNews);
-  allNews.push(guardianNews);
-  allNews.push(nytNews);
-  const articles = allNews.flat();
+  const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
 
   return (
     <>
