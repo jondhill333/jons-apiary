@@ -5,13 +5,7 @@ export default function NewsSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [data, setData] = useState([]);
 
-  const {
-    searchBarContainer,
-    searchbar,
-    form,
-    submitButtonContainer,
-    unselected,
-  } = styles;
+  const { searchBarContainer, searchbar, form, submitButtonContainer } = styles;
 
   function handleSearchTermChange(e) {
     let searchValueHolder = e.target.value;

@@ -12,16 +12,20 @@
     "three four four five"
     "three four four five"
     "three four four five";
-  gap: 5px;
-  margin-top: 20px;
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-top: 10px;
+}
+
+.articleContainer {
   background: var(--offGrey);
+  border-top: 1px solid red;
 }
 
 .containerTypeOne .articleContainer {
   max-height: auto;
   width: 100%;
-  padding: 1% 5px;
-  border: solid red 1px;
+  /* padding: 1% 5px; */
 }
 
 .containerTypeOne :nth-child(1) {
@@ -44,14 +48,12 @@
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(1) .link {
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(2) {
@@ -67,14 +69,12 @@
   font-size: 1rem;
   width: 40%;
   height: 0%;
-  border: solid red 1px;
 }
 .containerTypeOne :nth-child(2) .articleImage {
   display: flex;
   order: 2;
   height: 80%;
   width: 60%;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(2) .articleImage > img {
@@ -86,7 +86,6 @@
   order: 3;
   height: 10%;
   font-size: 1rem;
-  border: solid red 1px;
   width: 40%;
 }
 
@@ -116,14 +115,12 @@
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(3) .link {
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(4) {
@@ -139,7 +136,6 @@
   font-size: 1rem;
   width: 40%;
   height: 80%;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(4) .articleImage {
@@ -157,7 +153,6 @@
   order: 3;
   height: 10%;
   font-size: 1rem;
-  border: solid red 1px;
   width: 40%;
 }
 
@@ -188,32 +183,29 @@
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeOne :nth-child(5) .link {
   height: 10%;
   width: 100%;
   font-size: 1rem;
-  border: solid red 1px;
 }
 
 .containerTypeTwo {
   width: 90%;
-  margin: 5px auto;
+  margin: 10px auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: minmax(auto, 100px);
-  gap: 5px;
+  column-gap: 20px;
+  row-gap: 10px;
   font-size: 1rem;
-  background: var(--offGrey);
 }
 
 .containerTypeTwo .articleContainer {
   min-height: auto;
   width: 100%;
   padding: 1% 5px;
-  border: solid red 1px;
   font-size: 0.85rem;
 }
 
