@@ -53,7 +53,17 @@ export default function HeedlinesPage({
   guardianNewsUk,
   nytNews,
 }) {
-  const newsApiStore = [...newsNewsUsa, ...newsNewsUk]
+  const newsApiStore = [...newsNewsUsa, ...newsNewsUk];
+  newsApiStore
+    .map((article) => {
+      if (
+        article.source.name === "The New York Times" ||
+        article.source.name === "The Guardian" ||
+        article.source.name === "guardian.com"
+      ) {
+        newsApiStore.splice(newsApiStore.indexOf(article), 1);
+      }
+    })
     .sort(() => {
       return 0.5 - Math.random();
     })

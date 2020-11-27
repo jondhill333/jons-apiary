@@ -1,6 +1,29 @@
-/* .container {
+/* .containerTypeOne {
+  width: 90%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, minmax(70px, auto));
+  grid-template-areas:
+    "one   two  two   two"
+    "one   two  two   two"
+    "one   two  two   two"
+    "three two  two   two"
+    "three four four five"
+    "three four four five"
+    "three four four five";
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-top: 10px;
+}
+
+.containerTypeTwo {
+  width: 90%;
+  margin: 10px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  column-gap: 20px;
+  row-gap: 10px;
+  font-size: 1rem;
 } */

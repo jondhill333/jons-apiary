@@ -12,28 +12,6 @@ export default function SingleArticle({ data }) {
     link,
   } = styles;
 
-  let newsStoreOne;
-  let newsStoreTwo;
-  let newsStoreThree;
-  let gAndNytStoreMain;
-  let gAndNytStoreOne;
-  let gAndNytStoreTwo;
-  let gAndNytStorethree;
-
-  if (data) {
-    newsStoreOne = data.slice(0, 5);
-    newsStoreTwo = data.slice(5, 10);
-    newsStoreThree = data.slice(10, 15);
-
-    gAndNytStoreMain = data.slice(20, 40).sort(() => {
-      return 0.5 - Math.random();
-    });
-
-    gAndNytStoreOne = gAndNytStoreMain.slice(0, 4);
-    gAndNytStoreTwo = gAndNytStoreMain.slice(4, 8);
-    gAndNytStorethree = gAndNytStoreMain.slice(8, 12);
-  }
-
   return (
     <>
       <div className={containerTypeOne}>
