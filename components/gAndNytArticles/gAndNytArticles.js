@@ -3,32 +3,36 @@ import styles from "./gAndNytArticles.module.css";
 
 export default function GAndNytArticles({ data }) {
   const {
+    grid,
+    wrapper,
     container,
-    articleWrapper,
-    articleContainer,
-    articleTitle,
+    sourceAndTitle,
+    title,
     source,
     link,
   } = styles;
 
   return (
     <>
-      <div className={container}>
+      <div className={grid}>
         {data &&
           data.map((article) => (
-            <div className={articleWrapper}>
-              <div key={uuidv4()} className={articleContainer}>
-                <div className={articleTitle}>
-                  {article.webTitle
-                    ? article.webTitle.split(" - ")[0].substr(0, 100)
-                    : article.headline
-                    ? article.headline.main.split(" - ")[0].substr(0, 100)
-                    : ""}
-                </div>
-                <div className={source}>
-                  {article.source === "The New York Times"
-                    ? "The New York Times"
-                    : "The Guardian"}
+            <div className={wrapper}>
+              <div key={uuidv4()} className={container}>
+                <div className={sourceAndTitle}>
+                  <span className={source}>
+                    {article.source === "The New York Times"
+                      ? "The New York Times"
+                      : "The Guardian"}{" "}
+                    /{" "}
+                  </span>
+                  <span className={title}>
+                    {article.webTitle
+                      ? article.webTitle.split(" - ")[0].substr(0, 100)
+                      : article.headline
+                      ? article.headline.main.split(" - ")[0].substr(0, 100)
+                      : ""}
+                  </span>
                 </div>
                 <div className={link}>
                   <a

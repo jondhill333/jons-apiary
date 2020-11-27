@@ -15,7 +15,7 @@ export default function NewsDisplay({ articles }) {
     newsStoreTwo = articles.slice(5, 10);
     newsStoreThree = articles.slice(10, 15);
 
-    gAndNytStoreMain = articles.slice(20, 40).sort(() => {
+    gAndNytStoreMain = articles.slice(40, 59).sort(() => {
       return 0.5 - Math.random();
     });
 
@@ -27,16 +27,11 @@ export default function NewsDisplay({ articles }) {
   return (
     <>
       <NewsApiArticles data={newsStoreOne} />
-
-      {/* <GAndNytArticles data={gAndNytStoreOne} />
-
-      <NewsApiArticles data={newsStoreTwo} />
-
-      <GAndNytArticles data={gAndNytStoreTwo} />
-
-      <NewsApiArticles data={newsStoreThree} />
-
-      <GAndNytArticles data={gAndNytStorethree} /> */}
+      <GAndNytArticles data={gAndNytStoreOne} />
+      {/* <NewsApiArticles data={newsStoreTwo} /> */}
+      {/* <GAndNytArticles data={gAndNytStoreTwo} /> */}
+      {/* <NewsApiArticles data={newsStoreThree} /> */}
+      {/* <GAndNytArticles data={gAndNytStorethree} /> */}
     </>
   );
 }

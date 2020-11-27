@@ -1,0 +1,54 @@
+.grid {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 120px;
+  column-gap: 0px;
+  row-gap: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid grey;
+}
+
+.container {
+  background: var(--offGrey);
+  border-top: 1px solid red;
+  margin: 0px 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: flex-start;
+}
+
+.sourceAndTitle {
+  margin: 5px 3px;
+  min-height: 80%;
+  /* TODO find a better way of fixing the hieght */
+  height: 80px;
+}
+
+.source {
+  color: red;
+  font-weight: 700;
+}
+
+.title {
+  font-weight: 400;
+}
+.link {
+}
+
+.link > a {
+  color: var(--blue);
+}
+
+.grid :nth-child(4) {
+  border-right: none;
+}
