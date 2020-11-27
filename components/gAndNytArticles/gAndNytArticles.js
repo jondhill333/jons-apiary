@@ -30,7 +30,7 @@ export default function GAndNytArticles({ data }) {
                     {article.webTitle
                       ? article.webTitle.split(" - ")[0].substr(0, 100)
                       : article.headline
-                      ? article.headline.main.split(" - ")[0].substr(0, 100)
+                      ? article.headline.main.split(" - ")[0].substr(0, 95)
                       : ""}
                   </span>
                 </div>

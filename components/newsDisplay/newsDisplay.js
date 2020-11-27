@@ -28,10 +28,10 @@ export default function NewsDisplay({ articles }) {
     <>
       <NewsApiArticles data={newsStoreOne} />
       <GAndNytArticles data={gAndNytStoreOne} />
-      {/* <NewsApiArticles data={newsStoreTwo} /> */}
-      {/* <GAndNytArticles data={gAndNytStoreTwo} /> */}
-      {/* <NewsApiArticles data={newsStoreThree} /> */}
-      {/* <GAndNytArticles data={gAndNytStorethree} /> */}
+      <NewsApiArticles data={newsStoreTwo} />
+      <GAndNytArticles data={gAndNytStoreTwo} />
+      <NewsApiArticles data={newsStoreThree} />
+      <GAndNytArticles data={gAndNytStorethree} />
     </>
   );
 }

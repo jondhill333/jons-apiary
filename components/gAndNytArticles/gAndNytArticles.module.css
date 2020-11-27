@@ -7,7 +7,6 @@
   column-gap: 0px;
   row-gap: 10px;
   margin-top: 10px;
-  font-size: 1rem;
 }
 
 .wrapper {
@@ -37,16 +36,21 @@
 .source {
   color: red;
   font-weight: 700;
+  font-size: 1rem;
 }
 
 .title {
   font-weight: 400;
+  font-size: 0.9rem;
 }
 .link {
+  padding-top: 5px;
+  padding-left: 3px;
 }
 
 .link > a {
   color: var(--blue);
+  font-size: 0.88rem;
 }
 
 .grid :nth-child(4) {
