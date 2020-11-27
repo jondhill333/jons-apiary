@@ -19,6 +19,7 @@
 .sourceAndTitle {
   grid-column: 1;
   grid-row: 1 / span 2;
+  padding: 0 3px 0 3px;
 }
 
 .source {

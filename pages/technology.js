@@ -34,6 +34,7 @@ export async function getServerSideProps(context) {
 
 export default function TechnologyPage({ newsNews, guardianNews, nytNews }) {
   const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
+  console.log(articles);
 
   return (
     <>

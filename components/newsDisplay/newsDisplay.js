@@ -15,7 +15,7 @@ export default function NewsDisplay({ articles }) {
     newsStoreTwo = articles.slice(5, 10);
     newsStoreThree = articles.slice(10, 15);
 
-    gAndNytStoreMain = articles.slice(40, 59).sort(() => {
+    gAndNytStoreMain = articles.slice(20, 39).sort(() => {
       return 0.5 - Math.random();
     });
 
