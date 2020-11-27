@@ -1,0 +1,52 @@
+.wrapper {
+  grid-area: four;
+  width: 100%;
+  min-height: 100%;
+  border-right: 1px solid grey;
+}
+
+.container {
+  grid-area: four;
+  background: var(--offGrey);
+  border-top: 1px solid red;
+  margin: 0px 10px;
+  width: 95.8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr) 20%;
+  min-height: 100%;
+}
+.sourceAndTitle {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+}
+
+.source {
+  font-size: 1.1rem;
+  color: red;
+  font-weight: 700;
+}
+.title {
+  font-size: 1rem;
+}
+
+.image {
+  grid-column: 2 / -1;
+  grid-row: 1 / span 2;
+}
+.image > img {
+  height: 100%;
+  width: 100%;
+}
+
+.link {
+  grid-column: 1;
+  grid-row: 3;
+
+  font-size: 1rem;
+  margin: 3px;
+}
+
+.link > a {
+  color: var(--blue);
+}
