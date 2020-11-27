@@ -17,8 +17,8 @@ export default function GAndNytArticles({ data }) {
       <div className={grid}>
         {data &&
           data.map((article) => (
-            <div className={wrapper}>
-              <div key={uuidv4()} className={container}>
+            <div key={uuidv4()} className={wrapper}>
+              <div className={container}>
                 <div className={sourceAndTitle}>
                   <span className={source}>
                     {article.source === "The New York Times"

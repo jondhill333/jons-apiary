@@ -2,6 +2,7 @@
   grid-area: two;
   width: 100%;
   min-height: 100%;
+  border-right: 1px solid grey;
 }
 
 .container {
@@ -42,7 +43,6 @@
 .link {
   grid-column: 1;
   grid-row: 3;
-
   font-size: 1rem;
   margin: 3px;
 }

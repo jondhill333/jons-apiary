@@ -53,7 +53,6 @@ export default function HeedlinesPage({
   guardianNewsUk,
   nytNews,
 }) {
-  // console.log({ newsNewsUsa }, { newsNewsUk });
   const tempStore = [...newsNewsUsa, ...newsNewsUk];
   tempStore
     .map((article) => {
