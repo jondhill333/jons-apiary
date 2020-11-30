@@ -13,28 +13,28 @@
   width: 97%;
   /* padding: 0 0px; */
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr) 20%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   min-height: 100%;
 }
 .sourceAndTitle {
   grid-column: 1;
-  grid-row: 1 / span 2;
+  grid-row: 1 / span 3;
   padding: 0 3px 0 3px;
 }
 
 .source {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: red;
   font-weight: 700;
 }
 .title {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .image {
   grid-column: 2 / -1;
-  grid-row: 1 / span 2;
+  grid-row: 1 / -1;
 }
 .image > img {
   height: 100%;
@@ -43,9 +43,12 @@
 
 .link {
   grid-column: 1;
-  grid-row: 3;
+  grid-row: 4;
   font-size: 1rem;
   margin: 3px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .link > a {
