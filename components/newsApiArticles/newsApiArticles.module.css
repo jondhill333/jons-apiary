@@ -7,10 +7,14 @@
 }
 
 .display :nth-child(3) {
-  height: var(--rowTwoheight);
+  height: var(--rowTwoHeight);
+}
+
+.display :nth-child(4) {
+  height: var(--rowTwoHeight);
 }
 
 .display :nth-child(5) {
-  height: var(--rowTwoheight);
+  height: var(--rowTwoHeight);
   border-right: none;
 }

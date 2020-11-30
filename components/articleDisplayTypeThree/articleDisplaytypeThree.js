@@ -26,7 +26,7 @@ export default function ArticleDisplayTypeThree({ newsArticle }) {
         <div className={image}>
           <img src={article.urlToImage} />
         </div>
-        {/* <div className={content}>"{article.content.substr(0, 100)}..."</div> */}
+        <div className={content}>"{article.content.substr(0, 100)}..."</div>
         <div className={link}>
           <a target="_blank" href={article.url}>
             Read full story here
