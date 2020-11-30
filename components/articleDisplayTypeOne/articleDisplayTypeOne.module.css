@@ -26,23 +26,25 @@
 }
 
 .source {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: red;
   font-weight: 700;
 }
 .title {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .link {
-  /* height: 10%; */
-  /* width: 100%; */
   font-size: 1rem;
-  margin: 3px;
+  padding: 0px 3px 5px 3px;
   display: flex;
   align-items: flex-end;
 }
 
 .link > a {
   color: var(--blue);
+}
+
+.link > a:hover {
+  text-decoration: underline;
 }

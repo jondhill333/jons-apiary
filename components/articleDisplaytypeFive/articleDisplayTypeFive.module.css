@@ -12,14 +12,16 @@
   width: 91%;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .image {
-  height: 70%;
+  height: auto;
   width: 100%;
 }
 .sourceAndTitle {
   margin: 5px 3px;
+  height: 70%;
 }
 
 .source {
@@ -40,4 +42,8 @@
 
 .link > a {
   color: var(--blue);
+}
+
+.link > a:hover {
+  text-decoration: underline;
 }
