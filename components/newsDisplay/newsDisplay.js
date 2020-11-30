@@ -10,8 +10,6 @@ export default function NewsDisplay({ articles }) {
   let gAndNytStoreTwo;
   let gAndNytStorethree;
 
-  console.log(articles);
-
   if (articles) {
     newsStoreOne = articles.slice(0, 5);
     newsStoreTwo = articles.slice(5, 10);
