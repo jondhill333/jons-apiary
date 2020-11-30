@@ -6,6 +6,7 @@
 }
 .navContentContainer {
   height: 100%;
+  /* width: 90%; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 74% 26%;
@@ -13,7 +14,7 @@
     "appTitle appDescription"
     "categories categories";
   color: white;
-  margin: 0px 155px 0px 125px;
+  margin: 0px 10% 0px 10%;
 }
 
 .news {

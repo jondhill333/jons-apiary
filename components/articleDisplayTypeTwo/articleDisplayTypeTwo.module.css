@@ -2,15 +2,16 @@
   grid-area: two;
   width: 100%;
   min-height: 100%;
-  border-right: 1px solid grey;
 }
 
 .container {
   grid-area: two;
   background: var(--offGrey);
   border-top: 1px solid red;
-  margin: 0px 10px;
-  width: 95.8%;
+
+  margin: 0px auto;
+  width: 97%;
+  /* padding: 0 0px; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr) 20%;

@@ -9,7 +9,9 @@
   grid-area: one;
   background: var(--offGrey);
   border-top: 1px solid red;
-  margin: 0px 10px;
+  /* margin: 0px 10px;
+  width: 90%; */
+  margin: 0 auto;
   width: 90%;
   display: flex;
   flex-direction: column;
