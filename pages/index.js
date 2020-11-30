@@ -53,11 +53,22 @@ export default function HeedlinesPage({
   guardianNewsUk,
   nytNews,
 }) {
-  const newsApiStore = [...newsNewsUsa, ...newsNewsUk]
+  const tempStore = [...newsNewsUsa, ...newsNewsUk];
+  tempStore
+    .map((article) => {
+      if (
+        article.source.name === "The New York Times" ||
+        article.source.name === "The Guardian" ||
+        article.source.name === "guardian.com"
+      ) {
+        tempStore.splice(tempStore.indexOf(article), 1);
+      }
+    })
     .sort(() => {
       return 0.5 - Math.random();
-    })
-    .slice(0, 20);
+    });
+
+  const newsApiStore = tempStore.slice(0, 20);
 
   const gAndNytStore = [...guardianNewsUsa, ...guardianNewsUk, ...nytNews]
     .sort(() => {
@@ -66,6 +77,7 @@ export default function HeedlinesPage({
     .slice(0, 20);
 
   const articles = [...newsApiStore, ...gAndNytStore].flat();
+  console.log(articles);
 
   return (
     <>

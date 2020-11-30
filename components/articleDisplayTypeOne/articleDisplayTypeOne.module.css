@@ -1,0 +1,47 @@
+.wrapper {
+  grid-area: one;
+  width: 100%;
+  height: 100%;
+  border-right: 1px solid grey;
+}
+
+.container {
+  grid-area: one;
+  background: var(--offGrey);
+  border-top: 1px solid red;
+  margin: 0px 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  /* TODO - fix content outside box issue */
+  /* max-height: auto;
+    width: 100%; */
+}
+
+.image {
+  height: 70%;
+  width: 100%;
+}
+.sourceAndTitle {
+  margin: 5px 3px;
+}
+
+.source {
+  font-size: 1.1rem;
+  color: red;
+  font-weight: 700;
+}
+.title {
+  font-size: 1rem;
+}
+
+.link {
+  height: 10%;
+  width: 100%;
+  font-size: 1rem;
+  margin: 3px;
+}
+
+.link > a {
+  color: var(--blue);
+}
