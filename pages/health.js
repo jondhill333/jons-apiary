@@ -2,7 +2,20 @@ import Link from "next/link";
 import Layout from "../components/layout/layout";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
-export async function getServerSideProps(context) {
+export default function HealthPage({ newsNews, guardianNews, nytNews }) {
+  const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
+
+  return (
+    <>
+      <Layout>
+        <h1>Health News</h1>
+        <NewsDisplay articles={articles} />
+      </Layout>
+    </>
+  );
+}
+
+export async function getStaticProps(context) {
   const apiKey = process.env.NEWS_API_KEY;
   const GApiKey = process.env.GUARDIAN_NEWS_API_KEY;
   const NytApiKey = process.env.NYT_NEWS_API_KEY;
@@ -33,17 +46,4 @@ export async function getServerSideProps(context) {
       nytNews,
     },
   };
-}
-
-export default function HealthPage({ newsNews, guardianNews, nytNews }) {
-  const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
-
-  return (
-    <>
-      <Layout>
-        <h1>Health News</h1>
-        <NewsDisplay articles={articles} />
-      </Layout>
-    </>
-  );
 }
