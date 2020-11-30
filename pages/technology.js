@@ -3,7 +3,6 @@ import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
 export default function TechnologyPage({ newsNews, guardianNews, nytNews }) {
   const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
-  console.log(articles);
 
   return (
     <>
