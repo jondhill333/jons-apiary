@@ -1,7 +1,7 @@
 .wrapper {
-  grid-area: two;
-  width: 100%;
-  min-height: 100%;
+  width: 75%;
+  height: var(--rowOneheight);
+  margin-bottom: var(--bottomMargin);
 }
 
 .container {

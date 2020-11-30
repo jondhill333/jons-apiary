@@ -1,13 +1,10 @@
 import styles from "./newsApiArticles.module.css";
-import { v4 as uuidv4 } from "uuid";
-import ArticleDisplaytypeOne from "../articleDisplayTypeOne/articleDisplaytypeOne";
-import ArticleDisplaytypeTwo from "../articleDisplayTypeTwo/articleDisplaytypeTwo";
-import ArticleDisplaytypeThree from "../articleDisplayTypeThree/articleDisplaytypeThree";
-import ArticleDisplaytypeFour from "../articleDisplayTypeFour/articleDisplaytypeFour";
-import ArticleDisplaytypeFive from "../articleDisplaytypeFive/articleDisplaytypeFive";
+import ArticleDisplayTypeOne from "../articleDisplayTypeOne/articleDisplayTypeOne";
+import ArticleDisplayTypeTwo from "../articleDisplayTypeTwo/articleDisplaytTypeTwo";
+import ArticleDisplayTypeThree from "../articleDisplayTypeThree/articleDisplayTypeThree";
 
 export default function NewsApiArticles({ data }) {
-  const { grid } = styles;
+  const { display } = styles;
 
   let articleOne = data.splice(0, 1);
   let articleTwo = data.splice(1, 1);
@@ -17,12 +14,12 @@ export default function NewsApiArticles({ data }) {
 
   return (
     <>
-      <div className={grid}>
-        <ArticleDisplaytypeOne newsArticle={articleOne} />
-        <ArticleDisplaytypeTwo newsArticle={articleTwo} />
-        <ArticleDisplaytypeThree newsArticle={articleThree} />
-        <ArticleDisplaytypeFour newsArticle={articleFour} />
-        <ArticleDisplaytypeFive newsArticle={articleFive} />
+      <div className={display}>
+        <ArticleDisplayTypeOne newsArticle={articleOne} />
+        <ArticleDisplayTypeTwo newsArticle={articleTwo} />
+        <ArticleDisplayTypeOne newsArticle={articleThree} />
+        <ArticleDisplayTypeThree newsArticle={articleFour} />
+        <ArticleDisplayTypeOne newsArticle={articleFive} />
       </div>
     </>
   );

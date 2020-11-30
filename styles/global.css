@@ -7,6 +7,9 @@ html,
   --oxfordBlue: #14213d;
   --orangeWeb: #fca311;
   --offGrey: #f6f6f6;
+  --rowOneheight: 350px;
+  --rowTwoheight: 300px;
+  --bottomMargin: 10px;
 }
 
 body {
