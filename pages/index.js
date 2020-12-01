@@ -10,6 +10,7 @@ export default function HeedlinesPage({
   guardianNewsUsa,
   guardianNewsUk,
   nytNews,
+  context,
 }) {
   const tempStore = [...newsNewsUsa, ...newsNewsUk];
   tempStore
@@ -51,6 +52,7 @@ export async function getStaticProps(context) {
   const apiKey = process.env.NEWS_API_KEY;
   const GApiKey = process.env.GUARDIAN_NEWS_API_KEY;
   const NytApiKey = process.env.NYT_NEWS_API_KEY;
+  // console.log(context);
 
   const [
     newsNewsUsa,

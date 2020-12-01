@@ -2,6 +2,8 @@ import styles from "./newsApiArticles.module.css";
 import ArticleDisplayTypeOne from "../articleDisplayTypeOne/articleDisplayTypeOne";
 import ArticleDisplayTypeTwo from "../articleDisplayTypeTwo/articleDisplaytTypeTwo";
 import ArticleDisplayTypeThree from "../articleDisplayTypeThree/articleDisplayTypeThree";
+import ArticleDisplayTypeFour from "../articleDisplayTypeFour/articleDisplayTypeFour";
+import ArticleDisplayTypeFive from "../articleDisplayTypeFive/articleDisplayTypeFive";
 
 export default function NewsApiArticles({ data }) {
   const { display } = styles;
@@ -17,9 +19,9 @@ export default function NewsApiArticles({ data }) {
       <div className={display}>
         <ArticleDisplayTypeOne newsArticle={articleOne} />
         <ArticleDisplayTypeTwo newsArticle={articleTwo} />
-        <ArticleDisplayTypeOne newsArticle={articleThree} />
-        <ArticleDisplayTypeThree newsArticle={articleFour} />
-        <ArticleDisplayTypeOne newsArticle={articleFive} />
+        <ArticleDisplayTypeThree newsArticle={articleThree} />
+        <ArticleDisplayTypeFour newsArticle={articleFour} />
+        <ArticleDisplayTypeFive newsArticle={articleFive} />
       </div>
     </>
   );

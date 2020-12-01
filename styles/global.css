@@ -7,6 +7,7 @@ html,
   --oxfordBlue: #14213d;
   --orangeWeb: #fca311;
   --offGrey: #f6f6f6;
+  --grey: #808080;
   --rowOneheight: 350px;
   --rowTwoHeight: 300px;
   --bottomMargin: 10px;
@@ -38,4 +39,9 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+h1 {
+  margin-left: 10.8%;
+  padding: 0;
 }

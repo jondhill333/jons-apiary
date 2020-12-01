@@ -1,7 +1,6 @@
 .wrapper {
   width: 25%;
   height: var(--rowTwoHeight);
-  border-right: 1px solid var(--grey);
   margin-bottom: var(--bottomMargin);
 }
 
