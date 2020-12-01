@@ -1,30 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# The News Desk :newspaper:
 
-## Getting Started
+The news desk is an aggregateor app, which finds news articles from newsAPI.com , The Guradian and THhe new York times and then displays them per category page.
 
-First, run the development server:
+## Overview
 
-```bash
-npm run dev
-# or
-yarn dev
+This is a student project to improve my skills with React and Next JS. I designed this app as I keenly follow the news and wanted to build something that pulls from a number of sources but also displays in a pleasing manner.
+
+It is built to be lightweight and quick.
+
+The actual UI borrows heavily from the Guardian website but as I am trying to become a developer as opposed to a designer, I believed this a fair pay off - allowing me to focus more on the technical implementation as I had a ’design template’ to work from.
+
+Post are fetched from the APIs via getStaticProps in the relevant page - the whole site is then triggered to rebuild at 4am GMT every day. So we have a balance between super fast loading when accessed by the user but also the news feed is refreshed daily with up to date news.
+
+I hope you like it!
+
+[Checkout the demo](https://calendar-geckos-05.herokuapp.com/)
+
+## Tech stack
+
+- React v17.0.1
+- Next v10.0.1
+- Next CSS modules
+- Deployed with Vercel
+
+## Setup :hammer_and_wrench:
+
+To run the app locally, clone the repo and install the app using:
+
+```
+  $ git clone https://github.com/jondhill333/the-news-desk
+  $ cd the-news-desk
+  $ npm install
+  $ npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributors :sparkler:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This project is designed and developed by the [JonHill](https://github.com/jondhill333).
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Thanks for your interest in contributing! There are many ways to contribute to this project. Please see below for a wishlist.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Wishlist:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Add extra news source API's to get wider ranging content
+- Improved SEO
+- Implement Searchbar - so users can search for all news under a certain search term
+- "Leave feedback" widget or section
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is open source and available under the MIT License
