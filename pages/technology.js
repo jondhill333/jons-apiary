@@ -7,7 +7,6 @@ export default function TechnologyPage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Technology</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>

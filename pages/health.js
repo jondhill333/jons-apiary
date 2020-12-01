@@ -8,7 +8,6 @@ export default function HealthPage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Health</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>

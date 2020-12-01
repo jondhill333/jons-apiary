@@ -15,12 +15,10 @@ export default function Nav() {
     <>
       <div className={navWrapper}>
         <div className={navContentContainer}>
-          <div className={appTitle}>
-            News <br />
-            Agregator
-          </div>
+          <div className={appTitle}>The News Desk</div>
           <div className={appDescription}>
-            All the top stories from the best news outlets
+            All the top stories from
+            <br /> the best news outlets
           </div>
           <div className={categoryPagesContainer}>
             <div>

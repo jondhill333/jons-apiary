@@ -1,25 +1,36 @@
 import Head from "next/head";
 import Nav from "../nav/nav";
 import styles from "./layout.module.css";
+import { useRouter } from "next/router";
 
 const name = "Jon Hill";
-export const siteTitle = "Jons APIary";
+export const siteTitle = "The News Desk";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+  let pageTitle = "Headines";
+  if (router.asPath !== "/") {
+    let route = router.asPath.replace(router.asPath.charAt(0), "");
+    pageTitle = route.charAt(0).toUpperCase() + route.slice(1);
+  }
+
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico"></link>
+        <link rel="icon" href="/news.svg"></link>
         <meta
           name="description"
           content="Student project to display API and next.js skills"
         />
-        <title>{siteTitle}</title>
+        <title>
+          {siteTitle} - {pageTitle}
+        </title>
         <meta property="og:title" content={siteTitle} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charSet="utf-8" />
       </Head>
       <Nav />
+      <h1>{pageTitle}</h1>
       <div className={styles.container}>{children}</div>
     </>
   );

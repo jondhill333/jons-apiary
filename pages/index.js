@@ -40,7 +40,6 @@ export default function HeedlinesPage({
   return (
     <>
       <Layout>
-        <h1>Headlines</h1>
         {/* <NewsSearch /> */}
         <NewsDisplay articles={articles} />
       </Layout>

@@ -39,7 +39,6 @@ export default function SciencePage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Science</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>
