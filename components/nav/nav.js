@@ -6,8 +6,6 @@ export default function Nav() {
     navWrapper,
     navContentContainer,
     appTitle,
-    news,
-    aggegator,
     appDescription,
     categoryPagesContainer,
   } = styles;

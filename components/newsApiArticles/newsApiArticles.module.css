@@ -5,3 +5,10 @@
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+@media (max-width: 400px) {
+  .display {
+    width: 95%;
+    flex-direction: column;
+  }
+}

@@ -13,10 +13,11 @@ export default function HeedlinesPage({
   context,
 }) {
   const tempStore = [...newsNewsUsa, ...newsNewsUk];
+  console.log(tempStore);
   tempStore
     .map((article) => {
       if (
-        article.source.name === "The New York Times" ||
+        article.source.name === "New York Times" ||
         article.source.name === "The Guardian" ||
         article.source.name === "guardian.com"
       ) {
