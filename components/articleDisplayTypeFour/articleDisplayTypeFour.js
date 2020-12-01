@@ -1,7 +1,7 @@
 import styles from "./articleDisplayTypeFour.module.css";
 import { v4 as uuidv4 } from "uuid";
 
-export default function ArticleDisplaytypeFour({ newsArticle }) {
+export default function ArticleDisplayTypeFour({ newsArticle }) {
   const article = newsArticle[0];
   const {
     wrapper,
@@ -26,7 +26,11 @@ export default function ArticleDisplaytypeFour({ newsArticle }) {
         <div className={image}>
           <img src={article.urlToImage} />
         </div>
-        {/* <div className={content}>"{article.content.substr(0, 100)}..."</div> */}
+        {article.content ? (
+          <div className={content}>"{article.content.substr(0, 100)}..."</div>
+        ) : (
+          <div></div>
+        )}
         <div className={link}>
           <a target="_blank" href={article.url}>
             Read full story here

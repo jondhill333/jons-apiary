@@ -8,7 +8,7 @@ export default function SportPage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Sport News</h1>
+        <h1>Sport</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>

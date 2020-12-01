@@ -12,7 +12,7 @@ export default function BusinessPage({ newsNews, guardianNews, nytNews }) {
   return (
     <>
       <Layout>
-        <h1>Business News</h1>
+        <h1>Business</h1>
         <NewsDisplay articles={articles} />
       </Layout>
     </>

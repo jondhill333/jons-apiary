@@ -1,20 +1,18 @@
 .wrapper {
-  grid-area: two;
-  width: 100%;
-  min-height: 100%;
+  width: 75%;
+  height: var(--rowOneheight);
+  margin-bottom: var(--bottomMargin);
 }
 
 .container {
   grid-area: two;
   background: var(--offGrey);
   border-top: 1px solid red;
-
   margin: 0px auto;
   width: 97%;
-  /* padding: 0 0px; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 40%) repeat(2, 1fr);
+  grid-template-rows: auto 40% 1fr;
   height: 100%;
 }
 .sourceAndTitle {
@@ -24,12 +22,12 @@
 }
 
 .source {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: red;
   font-weight: 700;
 }
 .title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 .image {
@@ -40,19 +38,20 @@
   height: 100%;
   max-height: 350px;
   width: 100%;
+  object-fit: cover;
 }
 
 .content {
   grid-column: 1;
   grid-row: 2 / span 2;
-  padding: 5px 3px 0 3px;
+  padding: 20px 3px 0 3px;
   font-size: 1rem;
   font-style: italic;
 }
 
 .link {
   grid-column: 1;
-  grid-row: 4;
+  grid-row: 3;
   font-size: 1rem;
   padding: 0px 3px 5px 3px;
   display: flex;

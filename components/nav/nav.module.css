@@ -38,9 +38,9 @@
   grid-area: categories;
   display: flex;
   justify-content: space-between;
-  border-top: solid 1px grey;
-  border-left: solid 1px grey;
-  border-right: 1px solid grey;
+  border-top: solid 1px var(--grey);
+  border-left: solid 1px var(--grey);
+  border-right: 1px solid var(--grey);
   align-items: flex-end;
 }
 
