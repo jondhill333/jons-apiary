@@ -2,11 +2,13 @@ import Head from "next/head";
 import Nav from "../nav/nav";
 import styles from "./layout.module.css";
 import { useRouter } from "next/router";
+import MenuButton from "../mobileViewMenuButton/mobileViewMenuButton";
 
 const name = "Jon Hill";
 export const siteTitle = "The News Desk";
 
 export default function Layout({ children }) {
+  const { menuButtonContainer } = styles;
   const router = useRouter();
   let pageTitle = "Headlines";
   if (router.asPath !== "/") {
@@ -30,6 +32,9 @@ export default function Layout({ children }) {
         <meta charSet="utf-8" />
       </Head>
       <Nav />
+      <div className={menuButtonContainer}>
+        <MenuButton />
+      </div>
       <h1>{pageTitle}</h1>
       <div className={styles.container}>{children}</div>
     </>
