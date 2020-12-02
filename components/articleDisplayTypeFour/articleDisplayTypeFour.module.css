@@ -10,8 +10,6 @@
   margin: 0px auto;
   width: 95.5%;
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 90% 10%; */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30% 60% 10%;
   height: 100%;
@@ -37,7 +35,6 @@
 }
 .image > img {
   height: 100%;
-  /* max-height: 250px; */
   width: 100%;
   object-fit: cover;
 }
@@ -84,14 +81,15 @@
   .sourceAndTitle {
     order: 2;
     height: 80%;
+    padding: 10px 4px 0px 4px;
   }
   .source {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: red;
     font-weight: 700;
   }
   .title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .content {
     display: none;
@@ -100,7 +98,7 @@
   .link {
     display: flex;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     order: 4;
   }
 }
