@@ -84,12 +84,12 @@
     padding: 10px 4px 0px 4px;
   }
   .source {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: red;
     font-weight: 700;
   }
   .title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .content {
     display: none;
@@ -98,7 +98,7 @@
   .link {
     display: flex;
     justify-content: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     order: 4;
   }
 }
