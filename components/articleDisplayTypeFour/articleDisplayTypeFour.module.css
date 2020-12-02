@@ -11,7 +11,7 @@
   width: 95.5%;
   display: grid;
   /* grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 90% 10%; */
+  grid-template-rows: 90% 10%; */
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 30% 60% 10%;
   height: 100%;
@@ -63,4 +63,44 @@
 
 .link > a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    width: 100%;
+    height: var(--rowOneheight);
+    border-right: none;
+    margin-bottom: 10px;
+  }
+  .container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .image {
+    order: 1;
+  }
+  .sourceAndTitle {
+    order: 2;
+    height: 80%;
+  }
+  .source {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: 700;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .content {
+    display: none;
+    order: 3;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    order: 4;
+  }
 }

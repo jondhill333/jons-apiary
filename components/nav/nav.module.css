@@ -17,12 +17,6 @@
   margin: 0px 10.8% 0px 10.8%;
 }
 
-.news {
-}
-
-.aggegator {
-}
-
 .appTitle {
   font-size: 3rem;
   line-height: 1;
@@ -85,4 +79,37 @@
 .categoryPagesContainer > div > a {
   display: inline-block;
   padding-top: 8px;
+}
+
+@media (max-width: 400px) {
+  .navWrapper {
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    background: var(--oxfordBlue);
+  }
+  .navContentContainer {
+    height: 100%;
+    /* width: 90%; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin: 0px 10.8% 0px 10.8%;
+  }
+  .appTitle {
+    font-size: 1.9rem;
+    line-height: 1;
+    font-weight: 700;
+    padding-top: 10px;
+    text-align: center;
+  }
+  .appDescription {
+    font-size: 1rem;
+    font-weight: 500;
+    padding-top: 15px;
+    text-align: center;
+  }
+  .categoryPagesContainer {
+    display: none;
+  }
 }
