@@ -1,10 +1,7 @@
-import Head from "next/head";
-import Link from "next/link";
 import Layout from "../components/layout/layout";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
-import NewsSearch from "../components/newsSelector/newsSearch";
 
-export default function HeedlinesPage({
+export default function HeadlinesPage({
   newsNewsUsa,
   newsNewsUk,
   guardianNewsUsa,

@@ -2,14 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./mobileViewMenuButton.module.css";
-import { useRouter } from "next/router";
-import CustomLink from "../customLink/customLink";
 
-export default function MenuButton({ href }) {
-  const router = useRouter();
+export default function MenuButton() {
   const [display, setDisplay] = useState(false);
   const {
-    container,
     mobileMenuNav,
     link,
     button,
@@ -27,7 +23,6 @@ export default function MenuButton({ href }) {
   }
   return (
     <>
-      {/* <div className={container}> */}
       {display && (
         <div className={mobileMenuNav}>
           <div className={link}>
@@ -84,7 +79,6 @@ export default function MenuButton({ href }) {
           </div>
         )}
       </div>
-      {/* </div> */}
     </>
   );
 }
