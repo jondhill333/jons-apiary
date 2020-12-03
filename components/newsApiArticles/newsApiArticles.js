@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./newsApiArticles.module.css";
 import ArticleDisplayTypeOne from "../articleDisplayTypeOne/articleDisplayTypeOne";
 import ArticleDisplayTypeTwo from "../articleDisplayTypeTwo/articleDisplaytTypeTwo";
