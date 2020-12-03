@@ -36,7 +36,7 @@ To run the app locally, clone the repo and install the app using:
 
 ## Contributors :sparkler:
 
-This project is designed and developed by the [JonHill](https://github.com/jondhill333).
+This project is designed and developed by [JonHill](https://github.com/jondhill333).
 
 ## Contributing
 

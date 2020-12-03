@@ -11,6 +11,7 @@ html,
   --rowOneheight: 350px;
   --rowTwoHeight: 300px;
   --bottomMargin: 10px;
+  --mobileviewWidth: 500px;
 }
 
 body {
@@ -46,7 +47,7 @@ h1 {
   margin-top: 1.5%;
   margin-bottom: 1.5%;
 }
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   body {
     padding: 0;
     margin: 0;

@@ -3,3 +3,11 @@
   /* padding: 0 1rem;
   margin: 20px 50px; */
 }
+.menuButtonContainer {
+}
+
+@media screen and (min-width: 500px) {
+  .menuButtonContainer {
+    display: none;
+  }
+}

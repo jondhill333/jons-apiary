@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .display {
     width: 95%;
     flex-direction: column;
