@@ -1,17 +1,23 @@
+import React from "react";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./mobileViewMenuButton.module.css";
+import { useRouter } from "next/router";
+import CustomLink from "../customLink/customLink";
 
-export default function MenuButton() {
+export default function MenuButton({ href }) {
+  const router = useRouter();
   const [display, setDisplay] = useState(false);
   const {
     container,
     mobileMenuNav,
     link,
     button,
-    menuIcon,
+    openMenuIcon,
     line,
-    menuOpen,
+    lineOne,
+    lineTwo,
+    lineThree,
     menuCloseIcon,
     closeIcon,
   } = styles;
@@ -21,64 +27,64 @@ export default function MenuButton() {
   }
   return (
     <>
-      <div className={container}>
-        {display && (
-          <div className={mobileMenuNav}>
-            <div className={link}>
-              <Link href="/">
-                <a>Headlines</a>
-              </Link>
+      {/* <div className={container}> */}
+      {display && (
+        <div className={mobileMenuNav}>
+          <div className={link}>
+            <Link href="/">
+              <a>Headlines</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/technology">
+              <a>Technology</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/science">
+              <a>Science</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/culture">
+              <a>Culture</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/business">
+              <a>Business</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/sport">
+              <a>Sport</a>
+            </Link>
+          </div>
+          <div className={link}>
+            <Link href="/health">
+              <a>Health</a>
+            </Link>
+          </div>
+          <div className={link}></div>
+        </div>
+      )}
+
+      <div className={button} onClick={toggleMenu}>
+        {!display ? (
+          <div className={openMenuIcon}>
+            <div className={`${line} ${lineOne}`}></div>
+            <div className={`${line} ${lineTwo}`}></div>
+            <div className={`${line} ${lineThree}`}></div>
+          </div>
+        ) : (
+          <div className={menuCloseIcon}>
+            <div className={closeIcon}>
+              <img src="/cancel.png"></img>
             </div>
-            <div className={link}>
-              <Link href="/technology">
-                <a>Technology</a>
-              </Link>
-            </div>
-            <div className={link}>
-              <Link href="/science">
-                <a>Science</a>
-              </Link>
-            </div>
-            <div className={link}>
-              <Link href="/culture">
-                <a>Culture</a>
-              </Link>
-            </div>
-            <div className={link}>
-              <Link href="/business">
-                <a>Business</a>
-              </Link>
-            </div>
-            <div className={link}>
-              <Link href="/sport">
-                <a>Sport</a>
-              </Link>
-            </div>
-            <div className={link}>
-              <Link href="/health">
-                <a>Health</a>
-              </Link>
-            </div>
-            <div className={link}></div>
           </div>
         )}
-
-        <div className={button} onClick={toggleMenu}>
-          {!display ? (
-            <div className={menuIcon}>
-              <div className={`${line} ${menuOpen}`}></div>
-              <div className={`${line} ${menuOpen}`}></div>
-              <div className={`${line} ${menuOpen}`}></div>
-            </div>
-          ) : (
-            <div className={menuCloseIcon}>
-              <div className={closeIcon}>
-                <img src="/cancel.png"></img>
-              </div>
-            </div>
-          )}
-        </div>
       </div>
+      {/* </div> */}
     </>
   );
 }

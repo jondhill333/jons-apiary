@@ -7,7 +7,7 @@ import MenuButton from "../mobileViewMenuButton/mobileViewMenuButton";
 const name = "Jon Hill";
 export const siteTitle = "The News Desk";
 
-export default function Layout({ children }) {
+export default function Layout({ href, children }) {
   const { menuButtonContainer } = styles;
   const router = useRouter();
   let pageTitle = "Headlines";

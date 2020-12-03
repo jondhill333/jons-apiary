@@ -1,5 +1,7 @@
-.container {
-}
+/* .container {
+  height: 100vh;
+  z-index: -1;
+} */
 
 @keyframes slideUp {
   from {
@@ -50,35 +52,42 @@
   right: 6vw;
   padding-bottom: 2vh;
 }
-.menuIcon {
+.openMenuIcon {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   position: relative;
-  top: 43%;
+  top: 16px;
 }
 
 .line {
-  height: 3px;
+  height: 2px;
   background-color: black;
   border-radius: 1px;
+  width: 25px;
 }
 
-.menuOpen {
-  width: 25px;
-  margin-bottom: 4px;
+.lineOne {
+  margin-bottom: 5px;
+}
+.lineTwo {
+  margin-bottom: 5px;
+}
+.lineThree {
+  margin-bottom: none;
 }
 
 .menuCloseIcon {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .closeIcon {
   width: 20px;
   height: 20px;
   position: relative;
-  top: 15px;
+  top: 14px;
+  left: 14px;
 }
