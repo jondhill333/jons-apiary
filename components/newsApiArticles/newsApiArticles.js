@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./newsApiArticles.module.css";
 import ArticleDisplayTypeOne from "../articleDisplayTypeOne/articleDisplayTypeOneVercelFix";
 import ArticleDisplayTypeTwo from "../articleDisplayTypeTwo/articleDisplaytTypeTwo";
-import ArticleDisplayTypeThree from "../articleDisplayTypeThree/articleDisplayTypeThree";
+import ArticleDisplayTypeThree from "../articleDisplayTypeThree/articleDisplayTypeThreeVercelFix";
 import ArticleDisplayTypeFour from "../articleDisplayTypeFour/articleDisplayTypeFour";
 import ArticleDisplayTypeFive from "../articleDisplayTypeFive/articleDisplayTypeFive";
 
