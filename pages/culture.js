@@ -7,7 +7,7 @@ export default function CulturePage({ newsNews, guardianNews, nytNews }) {
 
   return (
     <>
-      <Layout url={url}>
+      <Layout>
         <NewsDisplay articles={articles} />
       </Layout>
     </>
