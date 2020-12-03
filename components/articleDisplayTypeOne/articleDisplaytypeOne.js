@@ -1,7 +1,7 @@
 import styles from "./articleDisplayTypeOne.module.css";
 import { v4 as uuidv4 } from "uuid";
 
-export default function ArticleDisplaytypeOne({ newsArticle }) {
+export default function ArticleDisplayTypeOne({ newsArticle }) {
   const article = newsArticle[0];
   const {
     wrapper,
