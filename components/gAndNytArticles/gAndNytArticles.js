@@ -45,7 +45,7 @@ export default function GAndNytArticles({ data }) {
                         : ""
                     }
                   >
-                    Read full story here
+                    Read the full story here
                   </a>
                 </div>
               </div>

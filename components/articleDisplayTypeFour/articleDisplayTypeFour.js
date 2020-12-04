@@ -33,7 +33,7 @@ export default function ArticleDisplayTypeFour({ newsArticle }) {
         )}
         <div className={link}>
           <a target="_blank" href={article.url}>
-            Read full story here
+            Read the full story here
           </a>
         </div>
       </div>
