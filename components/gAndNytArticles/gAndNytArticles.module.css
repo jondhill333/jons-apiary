@@ -59,16 +59,17 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+    width: 90%;
   }
   .sourceAndTitle {
     line-height: 0.9;
   }
   .source {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .title {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     padding-bottom: 10px;
   }
   .link {
@@ -77,14 +78,14 @@
 
   .link > a {
     color: var(--blue);
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
   .grid :nth-child(2) {
     border-right: none;
   }
 }
 
-@media (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 900px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 120px);
@@ -95,10 +96,7 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .grid {
-    width: 89%;
-  }
+@media (min-width: 900px) and (max-width: 1200px) {
   .sourceAndTitle {
     line-height: 1;
   }
@@ -118,5 +116,11 @@
   .link > a {
     color: var(--blue);
     font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .grid {
+    width: 94%;
   }
 }

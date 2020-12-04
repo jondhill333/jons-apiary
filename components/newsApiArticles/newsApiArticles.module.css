@@ -15,7 +15,7 @@
 
 @media (max-width: 1200px) {
   .display {
-    width: 90%;
+    width: 95%;
     flex-direction: row;
   }
 }
