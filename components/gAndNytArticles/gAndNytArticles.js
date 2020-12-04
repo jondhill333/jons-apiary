@@ -38,8 +38,8 @@ export default function GAndNytArticles({ data }) {
                   <a
                     target="_blank"
                     href={
-                      article.url
-                        ? article.url
+                      article.webUrl
+                        ? article.webUrl
                         : article.web_url
                         ? article.web_url
                         : ""
