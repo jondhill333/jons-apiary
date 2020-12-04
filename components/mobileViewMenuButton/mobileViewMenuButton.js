@@ -2,12 +2,15 @@ import React from "react";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./mobileViewMenuButton.module.css";
+import { useRouter } from "next/router";
 
 export default function MenuButton() {
   const [display, setDisplay] = useState(false);
   const {
     mobileMenuNav,
+    hidden,
     link,
+    active,
     button,
     openMenuIcon,
     line,
@@ -18,51 +21,65 @@ export default function MenuButton() {
     closeIcon,
   } = styles;
 
+  const router = useRouter();
+
   function toggleMenu() {
     setDisplay(!display);
   }
   return (
     <>
-      {display && (
-        <div className={mobileMenuNav}>
-          <div className={link}>
-            <Link href="/">
-              <a>Headlines</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/technology">
-              <a>Technology</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/science">
-              <a>Science</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/culture">
-              <a>Culture</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/business">
-              <a>Business</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/sport">
-              <a>Sport</a>
-            </Link>
-          </div>
-          <div className={link}>
-            <Link href="/health">
-              <a>Health</a>
-            </Link>
-          </div>
-          <div className={link}></div>
+      <div className={`${display ? mobileMenuNav : hidden}`}>
+        <div className={link}>
+          <Link href="/">
+            <a className={`${router.pathname == "/" ? active : ""}`}>
+              Headlines
+            </a>
+          </Link>
         </div>
-      )}
+        <div className={link}>
+          <Link href="/technology">
+            <a className={`${router.pathname == "/technology" ? active : ""}`}>
+              Technology
+            </a>
+          </Link>
+        </div>
+        <div className={link}>
+          <Link href="/science">
+            <a className={`${router.pathname == "/science" ? active : ""}`}>
+              Science
+            </a>
+          </Link>
+        </div>
+        <div className={link}>
+          <Link href="/culture">
+            <a className={`${router.pathname == "/culture" ? active : ""}`}>
+              Culture
+            </a>
+          </Link>
+        </div>
+        <div className={link}>
+          <Link href="/business">
+            <a className={`${router.pathname == "/business" ? active : ""}`}>
+              Business
+            </a>
+          </Link>
+        </div>
+        <div className={link}>
+          <Link href="/sport">
+            <a className={`${router.pathname == "/sport" ? active : ""}`}>
+              Sport
+            </a>
+          </Link>
+        </div>
+        <div className={link}>
+          <Link href="/health">
+            <a className={`${router.pathname == "/health" ? active : ""}`}>
+              Health
+            </a>
+          </Link>
+        </div>
+        <div className={link}></div>
+      </div>
 
       <div className={button} onClick={toggleMenu}>
         {!display ? (

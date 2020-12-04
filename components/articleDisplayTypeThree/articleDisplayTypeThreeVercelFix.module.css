@@ -57,11 +57,17 @@
   .container {
     height: 100%;
   }
+  .image {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .sourceAndTitle {
     padding: 10px 4px 0px 4px;
   }
   .source {
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: red;
     font-weight: 700;
   }

@@ -16,7 +16,7 @@
 }
 
 .image {
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 .sourceAndTitle {
@@ -52,6 +52,12 @@
   .wrapper {
     width: 100%;
     border-right: none;
+  }
+  .image {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   .source {
     font-size: 1.4rem;

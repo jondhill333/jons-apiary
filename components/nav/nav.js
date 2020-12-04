@@ -1,5 +1,6 @@
 import styles from "./nav.module.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Nav() {
   const {
@@ -8,7 +9,11 @@ export default function Nav() {
     appTitle,
     appDescription,
     categoryPagesContainer,
+    active,
   } = styles;
+
+  const router = useRouter();
+
   return (
     <>
       <div className={navWrapper}>
@@ -21,37 +26,57 @@ export default function Nav() {
           <div className={categoryPagesContainer}>
             <div>
               <Link href="/">
-                <a>Headlines</a>
+                <a className={`${router.pathname == "/" ? active : ""}`}>
+                  Headlines
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/technology">
-                <a>Technology</a>
+                <a
+                  className={`${
+                    router.pathname == "/technology" ? active : ""
+                  }`}
+                >
+                  Technology
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/science">
-                <a>Science</a>
+                <a className={`${router.pathname == "/science" ? active : ""}`}>
+                  Science
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/culture">
-                <a>Culture</a>
+                <a className={`${router.pathname == "/culture" ? active : ""}`}>
+                  Culture
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/business">
-                <a>Business</a>
+                <a
+                  className={`${router.pathname == "/business" ? active : ""}`}
+                >
+                  Business
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/sport">
-                <a>Sport</a>
+                <a className={`${router.pathname == "/sport" ? active : ""}`}>
+                  Sport
+                </a>
               </Link>
             </div>
             <div>
               <Link href="/health">
-                <a>Health</a>
+                <a className={`${router.pathname == "/Health" ? active : ""}`}>
+                  Health
+                </a>
               </Link>
             </div>
           </div>

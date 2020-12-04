@@ -6,7 +6,7 @@
   grid-template-rows: 120px;
   column-gap: 0px;
   row-gap: 10px;
-  /* margin-top: 10px; */
+  margin-top: 10px;
 }
 
 .wrapper {
@@ -62,22 +62,22 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 105px);
+    grid-template-rows: repeat(2, 120px);
     column-gap: 0px;
     row-gap: 10px;
-    /* margin-top: 10px; */
+    margin-top: 10px;
   }
   .sourceAndTitle {
-    line-height: 0.85;
+    line-height: 0.95;
   }
   .source {
     color: red;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
 
   .title {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     padding-bottom: 10px;
   }
   .link {

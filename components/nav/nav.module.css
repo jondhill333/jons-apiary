@@ -4,6 +4,12 @@
   margin: 0 auto;
   background: var(--oxfordBlue);
 }
+
+.active {
+  color: yellow;
+  opacity: 0.9;
+}
+
 .navContentContainer {
   height: 100%;
   display: grid;
@@ -83,7 +89,7 @@
 @media (max-width: 500px) {
   .navWrapper {
     width: 100%;
-    height: 100px;
+    height: 90px;
     margin: 0 auto;
     background: var(--oxfordBlue);
   }
@@ -105,7 +111,7 @@
   .appDescription {
     font-size: 1rem;
     font-weight: 500;
-    padding-top: 15px;
+    padding-top: 6px;
     text-align: center;
   }
   .categoryPagesContainer {
