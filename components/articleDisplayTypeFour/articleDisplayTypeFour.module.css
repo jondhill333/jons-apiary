@@ -11,7 +11,7 @@
   width: 95.5%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 30% 60% 10%;
+  grid-template-rows: 30% 59% 11%;
   height: 100%;
 }
 .sourceAndTitle {
@@ -51,7 +51,7 @@
   grid-column: 1;
   grid-row: 3;
   font-size: 0.8rem;
-  padding: 10px 2px 0px 3px;
+  padding: 0px 2px 5px 3px;
 }
 
 .link > a {
