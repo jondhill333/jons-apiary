@@ -47,7 +47,7 @@
   text-decoration: underline;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .wrapper {
     width: 100%;
     border-right: none;
@@ -78,5 +78,32 @@
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .wrapper {
+    width: 33.3%;
+    border-right: none;
+  }
+  .sourceAndTitle {
+    padding: 5px 4px 0px 4px;
+  }
+  .image {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .source {
+    font-size: 1.2rem;
+  }
+  .title {
+    font-size: 1.1rem;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    font-size: 1.1rem;
   }
 }
