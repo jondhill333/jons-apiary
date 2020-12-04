@@ -1,16 +1,18 @@
-/* .container {
-  height: 100vh;
-  z-index: -1;
-} */
-
 @keyframes slideUp {
   from {
     bottom: -220px;
-    /* position: absolute; */
   }
   to {
+    bottom: -3px;
+  }
+}
+
+@keyframes slideDown {
+  from {
     bottom: 0px;
-    /* position: fixed; */
+  }
+  to {
+    bottom: -220px;
   }
 }
 
@@ -29,8 +31,28 @@
   border: 1px solid white;
   animation-name: slideUp;
   animation-duration: 0.8s;
-  animation-fill-mode: both;
+  margin-right: 10px;
 }
+
+.hidden {
+  width: 220px;
+  height: 180px;
+  background-color: var(--oxfordBlue);
+  position: fixed;
+  bottom: 0px;
+  left: 23vw;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  border: 1px solid white;
+  animation-name: slideDown;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  margin-right: 10px;
+}
+
 .link {
   font-size: 1fr;
   color: white;
@@ -41,6 +63,11 @@
   border: 1px solid white;
 }
 
+.active {
+  color: yellow;
+  opacity: 0.9;
+}
+
 .button {
   height: 50px;
   width: 50px;
@@ -48,8 +75,8 @@
   border: 1px solid grey;
   background-color: yellow;
   position: fixed;
-  bottom: 2vh;
-  right: 6vw;
+  bottom: 1vh;
+  right: 3vw;
   padding-bottom: 2vh;
 }
 .openMenuIcon {
@@ -81,7 +108,6 @@
 .menuCloseIcon {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 .closeIcon {

@@ -1,14 +1,21 @@
 .display {
   width: 80%;
-  margin: 10px auto 0px auto;
+  margin: 10px auto 0px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .display {
     width: 95%;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1200px) {
+  .display {
+    width: 90%;
+    flex-direction: row;
   }
 }
