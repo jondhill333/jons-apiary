@@ -14,7 +14,7 @@ Post are fetched from the APIs via getStaticProps in the relevant page - the who
 
 I hope you like it!
 
-[Checkout the demo](https://calendar-geckos-05.herokuapp.com/)
+[Checkout the demo](https://thenewsdesk.vercel.app/)
 
 ## Tech stack
 
