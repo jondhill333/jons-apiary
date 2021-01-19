@@ -11,3 +11,14 @@
     display: none;
   }
 }
+@media screen and (max-width: 600px) {
+  .pageTitle {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .pageTitle {
+    margin-left: 2.5%;
+  }
+}

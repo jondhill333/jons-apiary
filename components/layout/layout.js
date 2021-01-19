@@ -35,7 +35,7 @@ export default function Layout({ href, children }) {
       <div className={menuButtonContainer}>
         <MenuButton />
       </div>
-      <h1>{pageTitle}</h1>
+      <h1 className={styles.pageTitle}>{pageTitle}</h1>
       <div className={styles.container}>{children}</div>
     </>
   );
