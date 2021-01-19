@@ -8,14 +8,14 @@
 
 @media (max-width: 600px) {
   .display {
-    width: 95%;
+    width: 100%;
     flex-direction: column;
   }
 }
 
 @media (max-width: 1200px) {
   .display {
-    width: 95%;
+    width: 100%;
     flex-direction: row;
   }
 }

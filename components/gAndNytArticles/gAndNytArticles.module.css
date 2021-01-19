@@ -3,7 +3,7 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 120px;
+  grid-template-rows: 140px;
   column-gap: 0px;
   row-gap: 10px;
   margin-top: 10px;
@@ -59,7 +59,7 @@
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    width: 90%;
+    width: 95%;
   }
   .sourceAndTitle {
     line-height: 0.9;
@@ -69,7 +69,7 @@
   }
 
   .title {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     padding-bottom: 10px;
   }
   .link {
@@ -121,6 +121,6 @@
 
 @media (min-width: 600px) and (max-width: 1200px) {
   .grid {
-    width: 94%;
+    width: 100%;
   }
 }
