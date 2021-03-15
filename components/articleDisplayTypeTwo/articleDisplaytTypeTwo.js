@@ -16,31 +16,33 @@ export default function ArticleDisplaytypeTwo({ newsArticle }) {
   } = styles;
 
   return (
-    <>
-      <div className={wrapper}>
-        <div key={uuidv4()} className={container}>
-          <div className={sourceAndTitle}>
-            <span className={source}>{article.source.name} / </span>
-            <span className={title}>
-              {article.title.split(" - ")[0].substr(0, 100)}
-            </span>
-          </div>
-          <div className={image}>
-            <img src={article.urlToImage} />
-          </div>
+    <div className={wrapper}>
+      <div key={uuidv4()} className={container}>
+        {article && (
+          <>
+            <div className={sourceAndTitle}>
+              <span className={source}>{article.source.name} / </span>
+              <span className={title}>
+                {article.title.split(" - ")[0].substr(0, 100)}
+              </span>
+            </div>
+            <div className={image}>
+              <img src={article.urlToImage} />
+            </div>
 
-          {article.content ? (
-            <div className={content}>{article.content.substr(0, 100)}...</div>
-          ) : (
-            <div className={emptyContent}></div>
-          )}
-          <div className={link}>
-            <a target="_blank" href={article.url}>
-              Read the full story here
-            </a>
-          </div>
-        </div>
+            {article.content ? (
+              <div className={content}>{article.content.substr(0, 100)}...</div>
+            ) : (
+              <div className={emptyContent}></div>
+            )}
+            <div className={link}>
+              <a target="_blank" href={article.url}>
+                Read the full story here
+              </a>
+            </div>
+          </>
+        )}
       </div>
-    </>
+    </div>
   );
 }

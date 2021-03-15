@@ -16,21 +16,25 @@ export default function ArticleDisplayTypeThree({ newsArticle }) {
   return (
     <div className={wrapper}>
       <div key={uuidv4()} className={container}>
-        <div className={image}>
-          <img src={article.urlToImage} />
-        </div>
-        <div className={sourceAndTitle}>
-          <span className={source}>{article.source.name} / </span>
-          <span className={title}>
-            {article.title.split(" - ")[0].substr(0, 100)}
-          </span>
-        </div>
+        {article && (
+          <>
+            <div className={image}>
+              <img src={article.urlToImage} />
+            </div>
+            <div className={sourceAndTitle}>
+              <span className={source}>{article.source.name} / </span>
+              <span className={title}>
+                {article.title.split(" - ")[0].substr(0, 100)}
+              </span>
+            </div>
 
-        <div className={link}>
-          <a target="_blank" href={article.url}>
-            Read the full story here
-          </a>
-        </div>
+            <div className={link}>
+              <a target="_blank" href={article.url}>
+                Read the full story here
+              </a>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
