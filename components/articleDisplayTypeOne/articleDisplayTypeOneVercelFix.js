@@ -13,8 +13,6 @@ export default function ArticleDisplayTypeOne({ newsArticle }) {
     link,
   } = styles;
 
-  console.log(article == true);
-
   return (
     <div className={wrapper}>
       <div key={uuidv4()} className={container}>
