@@ -24,21 +24,21 @@ export default function HeadlinesPage({
       return 0.5 - Math.random();
     });
 
-  const newsApiStore = tempStore.slice(0, 20);
+  const newsApiArticles = tempStore.slice(0, 20);
 
-  const gAndNytStore = [...guardianNewsUsa, ...guardianNewsUk, ...nytNews]
+  const gAndNytArticles = [...guardianNewsUsa, ...guardianNewsUk, ...nytNews]
     .sort(() => {
       return 0.5 - Math.random();
     })
     .slice(0, 20);
 
-  const articles = [...newsApiStore, ...gAndNytStore].flat();
-
   return (
     <>
       <Layout>
-        {/* <NewsSearch /> */}
-        <NewsDisplay articles={articles} />
+        <NewsDisplay
+          newsApiArticles={newsApiArticles}
+          gAndNytArticles={gAndNytArticles}
+        />
       </Layout>
     </>
   );

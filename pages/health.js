@@ -3,12 +3,16 @@ import Layout from "../components/layout/layout";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
 export default function HealthPage({ newsNews, guardianNews, nytNews }) {
-  const articles = [...newsNews, ...guardianNews, ...nytNews].flat();
+  const newsApiArticles = newsNews;
+  const gAndNytArticles = [...guardianNews, ...nytNews].flat();
 
   return (
     <>
       <Layout>
-        <NewsDisplay articles={articles} />
+        <NewsDisplay
+          newsApiArticles={newsApiArticles}
+          gAndNytArticles={gAndNytArticles}
+        />
       </Layout>
     </>
   );

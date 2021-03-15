@@ -3,16 +3,16 @@ import Layout from "../components/layout/layout";
 import NewsDisplay from "../components/newsDisplay/newsDisplay";
 
 export default function BusinessPage({ newsNews, guardianNews, nytNews }) {
-  const allNews = [];
-  allNews.push(newsNews);
-  allNews.push(guardianNews);
-  allNews.push(nytNews);
-  const articles = allNews.flat();
+  const newsApiArticles = newsNews;
+  const gAndNytArticles = [...guardianNews, ...nytNews].flat();
 
   return (
     <>
       <Layout>
-        <NewsDisplay articles={articles} />
+        <NewsDisplay
+          newsApiArticles={newsApiArticles}
+          gAndNytArticles={gAndNytArticles}
+        />
       </Layout>
     </>
   );
