@@ -16,10 +16,10 @@ export default function ArticleDisplayTypeOne({ newsArticle }) {
   console.log(article == true);
 
   return (
-    <>
-      {article && (
-        <div className={wrapper}>
-          <div key={uuidv4()} className={container}>
+    <div className={wrapper}>
+      <div key={uuidv4()} className={container}>
+        {article && (
+          <>
             <div className={image}>
               <img src={article.urlToImage} />
             </div>
@@ -35,9 +35,9 @@ export default function ArticleDisplayTypeOne({ newsArticle }) {
                 Read the full story here
               </a>
             </div>
-          </div>
-        </div>
-      )}
-    </>
+          </>
+        )}
+      </div>
+    </div>
   );
 }
