@@ -31,7 +31,7 @@ export default function ArticleDisplaytypeTwo({ newsArticle }) {
                 src={article.urlToImage}
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = "/newsdesk.png";
+                  e.target.src = "../../newsdesk.png";
                 }}
               />
             </div>
