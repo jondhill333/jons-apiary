@@ -26,7 +26,13 @@ export default function ArticleDisplayTypeFour({ newsArticle }) {
               </span>
             </div>
             <div className={image}>
-              <img src={article.urlToImage} />
+              <img
+                src={article.urlToImage}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/newsdesk.png";
+                }}
+              />
             </div>
             {article.content ? (
               <div className={content}>

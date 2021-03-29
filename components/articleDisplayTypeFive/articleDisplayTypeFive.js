@@ -19,7 +19,13 @@ export default function ArticleDisplayTypeFive({ newsArticle }) {
         {article && (
           <>
             <div className={image}>
-              <img src={article.urlToImage} />
+              <img
+                src={article.urlToImage}
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/newsdesk.png";
+                }}
+              />
             </div>
             <div className={sourceAndTitle}>
               <span className={source}>{article.source.name} / </span>
