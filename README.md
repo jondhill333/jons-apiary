@@ -1,6 +1,6 @@
 # The News Desk :newspaper:
 
-The news desk is an aggregator app, which finds news articles from newsAPI.com, The Guardian and The New York Times and then displays them per category page.
+The News Desk is an aggregator app, which finds news articles from newsAPI.com, The Guardian and The New York Times and then displays them per category page.
 
 ## Overview
 
