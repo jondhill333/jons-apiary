@@ -45,6 +45,8 @@ Thanks for your interest in contributing! There are many ways to contribute to t
 Wishlist:
 
 - Add extra news source API's to get wider ranging content
+- Refactor - is there a way to not have 5 different display components, but variants of the same component
+- Refactor CSS - less fixed units, more use of clamp, less media queries
 - Improved SEO
 - Implement Searchbar - so users can search for all news under a certain search term
 - "Leave feedback" widget or section
